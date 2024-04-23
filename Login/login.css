@@ -170,4 +170,5 @@ header i{
     color: rgb(255, 0, 0);
     height: 20px;
     margin-top: 5px;
+    display: none;
 }

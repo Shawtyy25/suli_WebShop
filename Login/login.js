@@ -1,9 +1,16 @@
+function wrongLogin(window){
+    window.style.border = '2px solid red'
+}
+
+
 const passYes = document.querySelector('.passYes')
 const passNo = document.querySelector('.passNo')
 const email_Input = document.querySelector('#email')
 const password_Input = document.querySelector('#password')
 const forgotPass = document.querySelector('.forgot')
 const loginButton = document.querySelector('.loginButton')
+const errorMessege = document.querySelector('.wrongPassWindow')
+const loginWindow = document.querySelector('.loginWindow')
 
 let user_Email = ['gaspardani719@gmail.com', 'abelszolnoki@gmail.com']
 let user_Username = ['gasparboss', 'shawtyy']
@@ -35,9 +42,23 @@ loginButton.addEventListener('click', () => {
             }
             i += 1
         }
+        email_Input.addEventListener('focus', () => {
+            errorMessege.style.display = ''
+            loginWindow.style.border = ''
+            
+        })
+        password_Input.addEventListener('focus', () => {
+            errorMessege.style.display = ''
+            loginWindow.style.border = ''
+        })
         if (found) {
             alert('talált')
+        } else{
+            errorMessege.style.display = 'block'
+            wrongLogin(loginWindow)
         }
+    } else {
+        errorMessege.style.display = ''
     }
     
 })
