@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --mainColor: rgb(40, 67, 99);
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(54, 53, 53), rgb(80, 79, 79));
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    padding: 0 5rem;
+    background-color: rgb(66, 66, 66);
+}
+header i{
+    color: white;
+    cursor: pointer;
+}
+.loginWindow{
+    margin: 0 auto;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    background-image: linear-gradient(to right,rgb(99, 97, 97), rgb(65, 63, 63) );
+    padding: 50px;
+    color: white;
+    border-radius: 20px;
+}
+
+.loginHeader{
+    margin: 0 auto;
+}
+.loginForm{
+    margin-top: 20px;
+}
+.login_Input{
+    display: flex;
+    flex-direction: column;
+    
+}
+#email{
+    padding: 5px 20px;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.login_Password{
+    display: flex;
+    flex-direction: column;
+}
+
+#password {
+    padding: 5px 20px;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    width: 100%;
+}
+
+.passNo, .passYes{
+    position: absolute;
+    right: 50%;
+    color: black;
+}
