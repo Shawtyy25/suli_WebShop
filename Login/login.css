@@ -7,13 +7,28 @@
 :root{
     --mainColor: rgb(40, 67, 99);
 }
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+
+    }
+}
 
 img{
     width: 100%;
 }
 
 body{
-    background-image: linear-gradient(to right, rgb(54, 53, 53), rgb(80, 79, 79));
+    background-image: url(./Login_pics/Bg.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
 }
 
 header{
@@ -21,23 +36,24 @@ header{
     justify-content: space-between;
     font-size: 2.5rem;
     padding: 0 5rem;
-    background-color: rgb(66, 66, 66);
 }
 header i{
     color: white;
     cursor: pointer;
 }
 .loginWindow{
-    margin: 0 auto;
-    max-width: 550px;
+    animation: transitionIn .9s;
+    margin: auto;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
-    background-image: linear-gradient(to right,rgb(99, 97, 97), rgb(65, 63, 63) );
     padding: 50px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 20px;
+    border: 1px solid white;
+    backdrop-filter: blur(8px);
 }
 
 .loginHeader{
@@ -45,6 +61,9 @@ header i{
 }
 .loginForm{
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .login_Input{
     display: flex;
@@ -52,11 +71,21 @@ header i{
     
 }
 #email{
-    padding: 5px 20px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 20px;
     outline: none;
     box-shadow: none;
-    border: none;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
+    transition: all .2s;
+}
+#email::placeholder{
+    color: rgb(255, 255, 255);
+}
+#email:focus{
+    outline: none;
+    box-shadow: 0px 0px 1px 2px white inset;
 }
 
 .login_Password{
@@ -64,18 +93,81 @@ header i{
     flex-direction: column;
 }
 
+.passInput{
+    position: relative;
+}
 #password {
-    padding: 5px 20px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 20px;
     outline: none;
     box-shadow: none;
-    border: none;
-    position: relative;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
     width: 100%;
+    color: white;
+    transition: all .2s;
+}
+#password:focus{
+    outline: none;
+    box-shadow: 0px 0px 1px 2px white inset;
+}
+
+#password::placeholder{
+    color: rgb(255, 255, 255);
 }
 
 .passNo, .passYes{
     position: absolute;
-    right: 50%;
+    right: 5%;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    top: 30%;
+    cursor: pointer;
+    transition: scale .1s;
+}
+.passNo:hover, .passYes:hover{
+    scale: 1.2;
+}
+
+.passNo:active, .passYes:active{
+    scale: 1;
+}
+
+.passYes{
+    display: none;
+}
+
+.rememberData{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginButton{
+    margin-top: 30px;
+    background-color: white;
     color: black;
+    text-align: center;
+    border-radius: 60px;
+    padding: 10px;
+    cursor: pointer;
+    transition: scale .2s;
+}
+.loginButton:hover{
+    scale: 1.02;
+}
+.loginButton:active{
+    scale: 1;
+}
+
+.forgot{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.wrongPassWindow{  
+    color: rgb(255, 0, 0);
+    height: 20px;
+    margin-top: 5px;
 }
