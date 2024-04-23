@@ -1,0 +1,77 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+:root{
+    --mainColor: rgb(40,67,99)
+}
+
+nav{
+    background-color: var(--mainColor);
+    position: sticky;
+    top: 0;
+}
+
+nav ul{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    display: flex;
+    gap: .2rem;
+    color: white;
+    padding: 2rem .5rem 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li:hover{
+    background-color: rgb(54, 90, 133);
+    padding: 1rem .5rem 1rem;
+    border-radius: 1rem;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.searchbar{
+    padding: 2rem .5rem 2rem;
+}
+
+.searchbar:hover{
+    padding: 2rem .5rem 2rem;
+    background-color: var(--mainColor);
+    border-radius: 0;
+}
+
+.searchbar input{
+    border-radius: .7rem 0 0 .7rem;
+    border: none;
+    padding: .5rem 1rem;
+}
+
+.searchIcon{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.shoppingIcon, .shoppingIcon:hover{
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.mainReload:hover{
+    background-color: var(--mainColor);
+}
+
+.mainIcon{
+    font-size: 1.5rem;
+}
+
+@media (max-width:200px) {
+    
+}
