@@ -1,5 +1,7 @@
-function wrongLogin(window){
+function wrongLogin(window, input, otherInput){
     window.style.border = '2px solid red'
+    input.style.border = '2px solid red'
+    otherInput.style.border = '2px solid red'
 }
 
 
@@ -11,6 +13,7 @@ const forgotPass = document.querySelector('.forgot')
 const loginButton = document.querySelector('.loginButton')
 const errorMessege = document.querySelector('.wrongPassWindow')
 const loginWindow = document.querySelector('.loginWindow')
+const reg_button = document.querySelector('.reg_button')
 
 let user_Email = ['gaspardani719@gmail.com', 'abelszolnoki@gmail.com']
 let user_Username = ['gasparboss', 'shawtyy']
@@ -42,23 +45,36 @@ loginButton.addEventListener('click', () => {
             }
             i += 1
         }
+
         email_Input.addEventListener('focus', () => {
             errorMessege.style.display = ''
             loginWindow.style.border = ''
+            email_Input.style.border = ''
+            password_Input.style.border = ''
             
         })
+
         password_Input.addEventListener('focus', () => {
             errorMessege.style.display = ''
             loginWindow.style.border = ''
+            email_Input.style.border = ''
+            password_Input.style.border = ''
         })
+
         if (found) {
-            alert('talált')
+            return
+            // window.location
         } else{
             errorMessege.style.display = 'block'
-            wrongLogin(loginWindow)
+            wrongLogin(loginWindow, email_Input, password_Input)
+            
         }
     } else {
         errorMessege.style.display = ''
     }
     
+})
+
+reg_button.addEventListener('click', () => {
+    alert('Nem működik')
 })

@@ -53,7 +53,7 @@ header i{
     color: rgb(255, 255, 255);
     border-radius: 20px;
     border: 1px solid white;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 .loginHeader{
@@ -171,4 +171,30 @@ header i{
     height: 20px;
     margin-top: 5px;
     display: none;
+}
+
+.close{
+    transition: all .1s;
+}
+.close:hover{
+    color: red;
+}
+.close:active{
+    scale: .9;
+}
+
+.registration{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.reg_button{
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.reg_button:hover{
+    text-decoration: underline;
 }
