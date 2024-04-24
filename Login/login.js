@@ -18,6 +18,7 @@ const reg_button = document.querySelector('.reg_button')
 let user_Email = ['gaspardani719@gmail.com', 'abelszolnoki@gmail.com']
 let user_Username = ['gasparboss', 'shawtyy']
 let user_Password = ['adminG123', 'adminS123']
+localStorage.clear()
 
 passNo.addEventListener('click', function () {
     passNo.style.display = 'none'

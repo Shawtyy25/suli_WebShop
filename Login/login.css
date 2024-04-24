@@ -29,6 +29,7 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 header{
@@ -53,12 +54,17 @@ header i{
     color: rgb(255, 255, 255);
     border-radius: 20px;
     border: 1px solid white;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 }
 
 .loginHeader{
     margin: 0 auto;
+    text-align: center;
 }
+.loginHeader h1{
+    font-size: 2.5rem;
+}
+
 .loginForm{
     margin-top: 20px;
     display: flex;
@@ -152,6 +158,7 @@ header i{
     padding: 10px;
     cursor: pointer;
     transition: scale .2s;
+    margin-bottom: 40px;
 }
 .loginButton:hover{
     scale: 1.02;
@@ -198,3 +205,16 @@ header i{
 .reg_button:hover{
     text-decoration: underline;
 }
+
+hr{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 575px) {
+    
+    .loginWindow {
+        border: none;
+        padding: 10px;
+    }
+}
+
