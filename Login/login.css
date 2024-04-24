@@ -1,18 +1,19 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     --mainColor: rgb(40, 67, 99);
 }
+
 @keyframes transitionIn {
     from {
         opacity: 0;
         transform: rotateX(-10deg);
     }
-    
+
     to {
         opacity: 1;
         transform: rotateX(0);
@@ -20,11 +21,11 @@
     }
 }
 
-img{
+img {
     width: 100%;
 }
 
-body{
+body {
     background-image: url(./Login_pics/Bg.jpg);
     background-repeat: no-repeat;
     height: 100vh;
@@ -32,17 +33,19 @@ body{
     background-attachment: fixed;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     font-size: 2.5rem;
     padding: 0 5rem;
 }
-header i{
+
+header i {
     color: white;
     cursor: pointer;
 }
-.loginWindow{
+
+.loginWindow {
     animation: transitionIn .9s;
     margin: auto;
     max-width: 500px;
@@ -57,26 +60,29 @@ header i{
     backdrop-filter: blur(20px);
 }
 
-.loginHeader{
+.loginHeader {
     margin: 0 auto;
     text-align: center;
 }
-.loginHeader h1{
+
+.loginHeader h1 {
     font-size: 2.5rem;
 }
 
-.loginForm{
+.loginForm {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.login_Input{
+
+.login_Input {
     display: flex;
     flex-direction: column;
-    
+
 }
-#email{
+
+#email {
     padding: 10px 20px;
     border-radius: 20px;
     outline: none;
@@ -86,22 +92,25 @@ header i{
     color: white;
     transition: all .2s;
 }
-#email::placeholder{
+
+#email::placeholder {
     color: rgb(255, 255, 255);
 }
-#email:focus{
+
+#email:focus {
     outline: none;
     box-shadow: 0px 0px 1px 2px white inset;
 }
 
-.login_Password{
+.login_Password {
     display: flex;
     flex-direction: column;
 }
 
-.passInput{
+.passInput {
     position: relative;
 }
+
 #password {
     padding: 10px 20px;
     border-radius: 20px;
@@ -113,16 +122,18 @@ header i{
     color: white;
     transition: all .2s;
 }
-#password:focus{
+
+#password:focus {
     outline: none;
     box-shadow: 0px 0px 1px 2px white inset;
 }
 
-#password::placeholder{
+#password::placeholder {
     color: rgb(255, 255, 255);
 }
 
-.passNo, .passYes{
+.passNo,
+.passYes {
     position: absolute;
     right: 5%;
     font-size: 1.3rem;
@@ -131,25 +142,28 @@ header i{
     cursor: pointer;
     transition: scale .1s;
 }
-.passNo:hover, .passYes:hover{
+
+.passNo:hover,
+.passYes:hover {
     scale: 1.2;
 }
 
-.passNo:active, .passYes:active{
+.passNo:active,
+.passYes:active {
     scale: 1;
 }
 
-.passYes{
+.passYes {
     display: none;
 }
 
-.rememberData{
+.rememberData {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.loginButton{
+.loginButton {
     margin-top: 30px;
     background-color: white;
     color: black;
@@ -160,61 +174,65 @@ header i{
     transition: scale .2s;
     margin-bottom: 40px;
 }
-.loginButton:hover{
+
+.loginButton:hover {
     scale: 1.02;
 }
-.loginButton:active{
+
+.loginButton:active {
     scale: 1;
 }
 
-.forgot{
+.forgot {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-.wrongPassWindow{  
+.wrongPassWindow {
     color: rgb(255, 0, 0);
     height: 20px;
     margin-top: 5px;
     display: none;
 }
 
-.close{
+.close {
     transition: all .1s;
 }
-.close:hover{
+
+.close:hover {
     color: red;
 }
-.close:active{
+
+.close:active {
     scale: .9;
 }
 
-.registration{
+.registration {
     display: flex;
     justify-content: center;
     column-gap: 10px;
 }
 
-.reg_button{
+.reg_button {
     font-weight: bold;
     cursor: pointer;
     color: white;
     text-decoration: none;
 }
-.reg_button:hover{
+
+.reg_button:hover {
     text-decoration: underline;
 }
 
-hr{
+hr {
     margin-bottom: 20px;
 }
 
 @media (max-width: 575px) {
-    
+
     .loginWindow {
         border: none;
         padding: 10px;
     }
 }
-
