@@ -62,7 +62,8 @@ loginButton.addEventListener('click', () => {
         })
 
         if (found) {
-            return
+            localStorage.setItem('login_Username', user_Username[i])
+            console.log(localStorage)
             // window.location
         } else{
             errorMessege.style.display = 'block'
