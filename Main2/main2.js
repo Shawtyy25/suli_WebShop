@@ -1,7 +1,8 @@
 const loginData_value = document.querySelector('.loginData h4')
+const loginForm = document.querySelector('.loginForm')
 
 if (loginData_value.textContent == 'Bejelentkezés') {
-    loginData_value.addEventListener('click', () => {
+    loginForm.addEventListener('click', () => {
         window.location.href = '../Login/login.html'
     })
 }

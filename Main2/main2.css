@@ -50,6 +50,7 @@ header{
     margin-left: 50px;
     align-items: center;
     color: white;
+    position: relative;
 }
 .person {
     font-size: 1.8rem;
@@ -87,3 +88,47 @@ header h4{
     font-size: .8rem;
     margin-bottom: -5px;
 }
+
+
+.LoginWindow{
+    position: absolute;
+    top: 150%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    width: 280px;
+    background-color: rgb(0, 0, 0);
+    left: -40%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.arrowUp{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -25px;
+    color: rgb(0, 0, 0);
+}
+
+.login_window_Content{
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.loginPerson{
+    font-size: 2.1rem;
+    margin-right: 15px;
+}
+
+.loginForm{
+    display: flex;
+    background-color: var(--mainColor);
+    padding: 5px 10px;
+    gap: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
