@@ -14,6 +14,7 @@ const loginButton = document.querySelector('.loginButton')
 const errorMessege = document.querySelector('.wrongPassWindow')
 const loginWindow = document.querySelector('.loginWindow')
 const reg_button = document.querySelector('.reg_button')
+const exit = document.querySelector('.close')
 
 let user_Email = ['gaspardani719@gmail.com', 'abelszolnoki@gmail.com']
 let user_Username = ['gasparboss', 'shawtyy']
@@ -43,6 +44,7 @@ loginButton.addEventListener('click', () => {
         while (i < user_Username.length) {
             if ((email_Input.value === user_Username[i] || email_Input.value == user_Email[i]) && password_Input.value === user_Password[i]) {
                 found = true
+                localStorage.setItem('login_Username', user_Username[i])
             }
             i += 1
         }
@@ -63,9 +65,7 @@ loginButton.addEventListener('click', () => {
         })
 
         if (found) {
-            localStorage.setItem('login_Username', user_Username[i])
-            console.log(localStorage)
-            // window.location
+            window.location.href = '../Main/index.html'
         } else{
             errorMessege.style.display = 'block'
             wrongLogin(loginWindow, email_Input, password_Input)
@@ -80,3 +80,8 @@ loginButton.addEventListener('click', () => {
 reg_button.addEventListener('click', () => {
     alert('Nem működik')
 })
+
+exit.addEventListener('click', () => {
+    window.location.href = '../Main/index.html'
+})
+
