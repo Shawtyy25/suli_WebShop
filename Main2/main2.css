@@ -384,13 +384,13 @@ header h4 {
 
 .settingsDiv{
     margin-top: 50px;
-    left: 40%;
+    left: 35%;
     position: absolute;
-    display: flex;
-    width: 500px;
+    display: none;
+    width: 600px;
     position: relative;
     flex-direction: column;
-    
+    animation: transitionInWindow .4s;
 }
 
 
@@ -441,4 +441,8 @@ header h4 {
 
 .settings_a:hover{
     background-color: rgb(202, 200, 200);
+}
+
+.default{
+    background-color: rgb(202, 200, 200)
 }
