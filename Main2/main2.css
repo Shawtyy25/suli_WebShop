@@ -7,7 +7,7 @@
 }
 
 :root {
-    --mainColor: rgb(40, 67, 99);
+    --mainColor: rgb(10,87,99);
 
     --lightBg: #fff;
     --lightColor: #fff;
@@ -382,3 +382,63 @@ header h4 {
     }
 }
 
+.settingsDiv{
+    margin-top: 50px;
+    left: 40%;
+    position: absolute;
+    display: flex;
+    width: 500px;
+    position: relative;
+    flex-direction: column;
+    
+}
+
+
+.settings{
+    display: flex;
+    height: 25rem;
+    
+}
+
+.SleftSide {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(160, 160, 160);
+    font-size: 20px;
+    border-radius: 20px 0 0 20px;
+}
+
+
+.SrightSide {
+    padding: 40px 20px;
+    display: flex;
+    background-color: gray;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.topSettings{
+    position: absolute;
+    height: 20px;
+    right: 0%;
+    top: 0px;
+}
+
+.closeWindowSettings {
+    font-size: 2rem;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.closeWindowSettings:hover {
+    color: rgb(231, 7, 7);
+}
+.settings_a{
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settings_a:hover{
+    background-color: rgb(202, 200, 200);
+}
