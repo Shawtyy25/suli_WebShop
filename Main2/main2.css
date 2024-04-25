@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0 ;
+    margin: 0 ;
 }
 
 :root{
@@ -47,7 +47,6 @@ header{
 .loginData{
     display: flex;
     gap: 10px;
-    margin-left: 50px;
     align-items: center;
     color: white;
     position: relative;
@@ -92,16 +91,31 @@ header h4{
 
 .LoginWindow{
     position: absolute;
-    top: 150%;
+    top: 110%;
     color: rgb(255, 255, 255);
-    display: flex;
+    display: none;
     font-weight: bold;
     flex-direction: column;
     width: 280px;
-    background-color: rgb(0, 0, 0);
-    left: -40%;
+    background-color: rgb(165, 165, 165);
+    left: -10%;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0 0 10px 1px black;
+    animation: transitionInWindow .4s;
+}
+
+
+@keyframes transitionInWindow {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -109,7 +123,7 @@ header h4{
     text-align: center;
     font-size: 1.5rem;
     margin-top: -25px;
-    color: rgb(0, 0, 0);
+    color: rgb(165, 165, 165);
 }
 
 .login_window_Content{
@@ -132,3 +146,56 @@ header h4{
     transition: background-color 0.2s;
 }
 
+.loginDiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 20px 20px 50px;
+}
+
+/* login utáni ablak */
+
+.loginWindowAfter{
+    position: absolute;
+    top: 110%;
+    color: rgb(255, 255, 255);
+    display: none;
+    font-weight: bold;
+    flex-direction: column;
+    width: 200px;
+    background-color: rgb(165, 165, 165);
+    left: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px black;
+    animation: transitionInWindow .4s;
+    text-align: center;
+}
+
+.afterLoginContent {
+    display: flex;
+    flex-direction: column;
+}
+.afterLoginContent h3{
+    cursor: pointer;
+    padding: 8px;
+    transition: all .2s;
+}
+.logout{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.logout i{
+    font-size: 20px;
+}
+.logout:hover{
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.exceptTheLasth3:hover{
+    background-color: gray;
+    border-radius: 20px;
+}
