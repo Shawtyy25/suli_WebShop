@@ -21,7 +21,7 @@ let user_Username = ['gasparboss', 'shawtyy']
 let user_Password = ['adminG123', 'adminS123']
 localStorage.clear()
 
-passNo.addEventListener('click', function () {
+passNo.addEventListener('click', () => {
     passNo.style.display = 'none'
     passYes.style.display = 'block'
     password_Input.type = 'text'
