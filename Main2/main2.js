@@ -43,8 +43,6 @@ function lightTheme(body, dropdown, arrowUp){
     body.style.transition = 'all .3s'
 }
 
-
-
 const loginData_value = document.querySelector('.loginData h4')
 const loginForm = document.querySelector('.loginForm')
 const loginDiv = document.querySelector('.loginDiv')
@@ -64,15 +62,6 @@ const body = document.querySelector('body')
 const dropdown_window = document.querySelectorAll('.dropdown_window')
 const arrowUp = document.querySelectorAll('.arrowUp_2')
 const searchBar = document.querySelector('#search')
-const closeWindowSettings = document.querySelector('.closeWindowSettings')
-const settingsDiv = document.querySelector('.settingsDiv')
-const settings = document.querySelector('.Settings')
-const defaultV = document.querySelector('.default')
-const user = document.querySelector('.user')
-const rate = document.querySelector('.rate')
-const messege = document.querySelector('.messege')
-const settings_a = document.querySelectorAll('.settings_a')
-
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -107,7 +96,6 @@ close_Themes.addEventListener('click', () => {
 
 t_Settings.addEventListener('click', () => {
     themeChange.style.display = 'flex'
-    afterLoginWindow.style.display = ''
 })
 
 
@@ -122,19 +110,6 @@ lightT_Div.addEventListener('click', () => {
     themeChange.style.display = ''
 })
 
-closeWindowSettings.addEventListener('click', () => {
-    settingsDiv.style.transition = 'all .4s'
-    settingsDiv.style.display = ''
-})
 
-settings.addEventListener('click', () => {
-    settingsDiv.style.display = 'flex'
-    afterLoginWindow.style.display = ''
-})
 
-settings_a.forEach(items => {
-    items.addEventListener('click', () => {
-        items.style.backgroundColor = 'rgb(202, 200, 200)'
-    })
-    
-})
+
