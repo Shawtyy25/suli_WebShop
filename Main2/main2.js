@@ -53,7 +53,7 @@
  const favouritesWindow = document.querySelector('.favouritesWindow')
  const cart = document.querySelector('.cart')
  const cartWindow = document.querySelector('.cartWindow')
- const themeChange = document.querySelector('.themeChange')
+ const themeChange = document.querySelector('.themeChangeBlock')
  const lightT_Div = document.querySelector('.themeLight')
  const darkT_Div = document.querySelector('.themeDark')
  const close_Themes = document.querySelector('.closeWindow')

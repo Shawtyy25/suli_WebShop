@@ -30,11 +30,12 @@
 main{
     width: 80%;
     margin: 0 auto;
+    padding: 50px;
 }
 
 .carouselSlide, .carouselSlide img{
     height: 70vh;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 #carouselBg1, #carouselBg2, #carouselBg3{

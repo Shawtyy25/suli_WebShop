@@ -16,7 +16,7 @@
     <header>
         <div class="logo">
             <i class="bi bi-alipay mainIcon"></i>
-            <h2>Webshop</h2>
+            <h2 style="font-size: 2rem;">Webshop</h2>
         </div>
         <div class="searchbar">
             <input type="search" name="search" id="search">
@@ -31,7 +31,7 @@
 
 
 
-            <div class="LoginWindow">
+            <div class="LoginWindow"  style="position: absolute; top: 110%; color: rgb(255, 255, 255); display: none; font-weight: bold; flex-direction: column; width: 280px; background-color: rgb(165, 165, 165); left: -10%; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px 1px black; animation: transitionInWindow .4s;">
                 <i class="bi bi-caret-up-fill arrowUp"></i>
                 <div class="login_window_Content">
                     <i class="bi bi-person loginPerson"></i>
@@ -64,7 +64,7 @@
             <h4>Kedvencek</h4>
             <i class="bi bi-caret-down-fill arrowdown"></i>
 
-            <div class="favouritesWindow dropdown_window">
+            <div class="favouritesWindow dropdown_window" style="position: absolute; top: 210%; color: rgb(255, 255, 255); display: none; font-weight: bold; flex-direction: column; width: 230px; background-color: rgb(165, 165, 165); left: -30%; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px 1px black; animation: transitionInWindow .4s; text-align: center; font-size: 1rem;">
                 <i class="bi bi-caret-up-fill arrowUp_2 arrowUp"></i>
                 <p>Nincsenek kedvenc termékeid</p>
             </div>
@@ -74,7 +74,7 @@
             <h4>Kosár</h4>
             <i class="bi bi-caret-down-fill arrowdown"></i>
 
-            <div class="cartWindow  dropdown_window">
+            <div class="cartWindow  dropdown_window" style="position: absolute; top: 210%; color: rgb(255, 255, 255); display: none; font-weight: bold; flex-direction: column; width: 200px; background-color: rgb(165, 165, 165); left: -50%; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px 1px black; animation: transitionInWindow .4s; text-align: center; font-size: 1rem;">
                 <i class="bi bi-caret-up-fill arrowUp_2 arrowUp"></i>
                 <p>Üres a kosarad.</p>
                 <div class="cartInclude">
@@ -86,29 +86,32 @@
         </div>
     </header>
     <section>
-        <div class="themeChange">
-            <div class="closeDiv">
-                <i class="bi bi-x closeWindow"></i>
-            </div>
-            <h1>Téma</h1>
-            <div class="themes">
-                <div class="lightTdiv">
-                    <div class="themeLight">
-                        <i class="bi bi-display-fill"></i>
-                    </div>
-                    <p style="color: white;">Világos</p>
+        <div class="themeChangeBlock">
+            <div class="themeChange">
+                <div class="closeDiv">
+                    <i class="bi bi-x closeWindow"></i>
                 </div>
-                <div class="darkTdiv">
-                    <div class="themeDark">
-                        <i class="bi bi-display-fill"></i>
+                <h1>Téma</h1>
+                <div class="themes">
+                    <div class="lightTdiv">
+                        <div class="themeLight">
+                            <i class="bi bi-display-fill"></i>
+                        </div>
+                        <p style="color: white;">Világos</p>
                     </div>
-                    <p style="color: white;">Sötét</p>
+                    <div class="darkTdiv">
+                        <div class="themeDark">
+                            <i class="bi bi-display-fill"></i>
+                        </div>
+                        <p style="color: white;">Sötét</p>
+                    </div>
+    
                 </div>
-
+    
             </div>
-
+    
         </div>
-
+        
         <div class="settingsDiv">
             <div class="topSettings">
                 <i class="bi bi-x closeWindowSettings"></i>
@@ -385,6 +388,7 @@
             </div>
         </div>
     </main>
+    
 
     <footer>
         <div class="footerContent">
