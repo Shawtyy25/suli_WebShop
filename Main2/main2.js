@@ -136,5 +136,4 @@ settings_a.forEach(items => {
     items.addEventListener('click', () => {
         items.style.backgroundColor = 'rgb(202, 200, 200)'
     })
-    
 })
