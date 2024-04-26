@@ -16,7 +16,7 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
 }
 
 
-function darkTheme(body, dropdown, arrowUp) {
+function darkTheme(body, dropdown, arrowUp, header) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -27,6 +27,7 @@ function darkTheme(body, dropdown, arrowUp) {
     })
 
     body.style.transition = 'all .3s'
+    header.style.backgroundColor = 'var(--darkBgNav)'
 }
 
 
@@ -65,6 +66,7 @@ const searchBar = document.querySelector('#search')
 const s_Settings = document.querySelector('.s_Settings')
 const settingsBlock = document.querySelector('.settingsBlock')
 const closeWindowSettings = document.querySelector('.closeWindowSettings')
+const header = document.querySelector('header')
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -106,7 +108,7 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp)
+    darkTheme(body, dropdown_window, arrowUp, header)
     themeChange.style.display = ''
 })
 
@@ -124,4 +126,3 @@ s_Settings.addEventListener('click', () => {
 closeWindowSettings.addEventListener('click', () => {
     settingsBlock.style.display = ''
 })
-
