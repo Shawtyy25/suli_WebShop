@@ -110,6 +110,3 @@ lightT_Div.addEventListener('click', () => {
     themeChange.style.display = ''
 })
 
-
-
-
