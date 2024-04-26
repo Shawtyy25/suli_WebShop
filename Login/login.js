@@ -21,7 +21,7 @@ let user_Username = ['gasparboss', 'shawtyy']
 let user_Password = ['adminG123', 'adminS123']
 localStorage.clear()
 
-passNo.addEventListener('click', function () {
+passNo.addEventListener('click', () => {
     passNo.style.display = 'none'
     passYes.style.display = 'block'
     password_Input.type = 'text'
@@ -65,7 +65,7 @@ loginButton.addEventListener('click', () => {
         })
 
         if (found) {
-            window.location.href = '../Main2/main2.html'
+            window.location.href = '../Main/main.html'
         } else{
             errorMessege.style.display = 'block'
             wrongLogin(loginWindow, email_Input, password_Input)
@@ -82,6 +82,6 @@ reg_button.addEventListener('click', () => {
 })
 
 exit.addEventListener('click', () => {
-    window.location.href = '../Main2/main2.html'
+    window.location.href = '../Main/main.html'
 })
 
