@@ -16,7 +16,7 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
 }
 
 
-function darkTheme(body, dropdown, arrowUp, header, carouselIMG) {
+function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -28,11 +28,24 @@ function darkTheme(body, dropdown, arrowUp, header, carouselIMG) {
 
     body.style.transition = 'all .3s'
     header.style.backgroundColor = 'var(--darkBgNav)'
-    carouselIMG.style.filter = 'brightness(40%)'
+
+    carouselIMG.forEach(item => {
+        item.style.filter = 'brightness(60%)'
+    })
+
+    productcardtext.forEach(item => {
+        item.style.backgroundColor = 'var(--darkCards)'
+        item.style.color = 'var(--lightColor)'
+    })
+    
+    productTextH2.style.color = 'var(--ButtonColor)'
+    productTextH4.style.color = 'var(--lightColor)'
+    
+    cartIncludeBg.style.backgroundColor = 'var(--ButtonColor)'
 }
 
 
-function lightTheme(body, dropdown, arrowUp, header, carouselIMG) {
+function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--lightNav)'
     });
@@ -43,6 +56,20 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG) {
     })
     header.style.backgroundColor = 'var(--mainColor)'
     body.style.transition = 'all .3s'
+
+    carouselIMG.forEach(item => {
+        item.style.filter = ''
+    })
+
+    productcardtext.forEach(item => {
+        item.style.backgroundColor = ''
+        item.style.color = ''
+    })
+    
+    productTextH2.style.color = ''
+    productTextH4.style.color = ''
+    
+    cartIncludeBg.style.backgroundColor = ''
 }
 
 const loginData_value = document.querySelector('.loginData h4')
@@ -68,7 +95,13 @@ const s_Settings = document.querySelector('.s_Settings')
 const settingsBlock = document.querySelector('.settingsBlock')
 const closeWindowSettings = document.querySelector('.closeWindowSettings')
 const header = document.querySelector('header')
-const carouselImg = document.querySelector('.carouselSlide img')
+const carouselImg = document.querySelectorAll('.carouselSlide img')
+const productCardText = document.querySelectorAll('.productCardText') 
+const productTexth4 = document.querySelector('.productText h4')
+const productTexth2 = document.querySelector('.productText h2')
+const cartIncludeButton = document.querySelector('.cartInclude')
+const main = document.querySelector('main')
+
 
 
 if (loginData_value.textContent == 'Bejelentkezés') {
@@ -111,12 +144,12 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp, header, carouselImg)
+    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton)
     themeChange.style.display = ''
 })
 
 lightT_Div.addEventListener('click', () => {
-    lightTheme(body, dropdown_window, arrowUp, header, carouselImg)
+    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton)
     themeChange.style.display = ''
 })
 
@@ -129,3 +162,22 @@ s_Settings.addEventListener('click', () => {
 closeWindowSettings.addEventListener('click', () => {
     settingsBlock.style.display = ''
 })
+
+let timeoutId;
+
+document.addEventListener('mouseover', () => {
+    timeoutId = setTimeout(() => {
+        afterLoginWindow.style.display = ''
+        favouritesWindow.style.display = ''
+        cartWindow.style.display = ''
+    }, 800)
+})
+
+document.addEventListener('mouseout', () => {
+    clearTimeout(timeoutId)
+})
+
+/* main.addEventListener('mouseover', () => {
+    afterLoginWindow.style.display = ''    
+
+}) */
