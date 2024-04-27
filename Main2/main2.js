@@ -16,7 +16,7 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
 }
 
 
-function darkTheme(body, dropdown, arrowUp, header) {
+function darkTheme(body, dropdown, arrowUp, header, carouselIMG) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -28,10 +28,11 @@ function darkTheme(body, dropdown, arrowUp, header) {
 
     body.style.transition = 'all .3s'
     header.style.backgroundColor = 'var(--darkBgNav)'
+    carouselIMG.style.filter = 'brightness(40%)'
 }
 
 
-function lightTheme(body, dropdown, arrowUp) {
+function lightTheme(body, dropdown, arrowUp, header, carouselIMG) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--lightNav)'
     });
@@ -40,7 +41,7 @@ function lightTheme(body, dropdown, arrowUp) {
     arrowUp.forEach(item => {
         item.style.color = 'var(--lightNav)';
     })
-
+    header.style.backgroundColor = 'var(--mainColor)'
     body.style.transition = 'all .3s'
 }
 
@@ -67,6 +68,8 @@ const s_Settings = document.querySelector('.s_Settings')
 const settingsBlock = document.querySelector('.settingsBlock')
 const closeWindowSettings = document.querySelector('.closeWindowSettings')
 const header = document.querySelector('header')
+const carouselImg = document.querySelector('.carouselSlide img')
+
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -108,12 +111,12 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp, header)
+    darkTheme(body, dropdown_window, arrowUp, header, carouselImg)
     themeChange.style.display = ''
 })
 
 lightT_Div.addEventListener('click', () => {
-    lightTheme(body, dropdown_window, arrowUp)
+    lightTheme(body, dropdown_window, arrowUp, header, carouselImg)
     themeChange.style.display = ''
 })
 
