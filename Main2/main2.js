@@ -163,7 +163,10 @@ closeWindowSettings.addEventListener('click', () => {
     settingsBlock.style.display = ''
 })
 
-let timeoutId;
+
+
+let timeoutId
+
 
 document.addEventListener('mouseover', () => {
     timeoutId = setTimeout(() => {
@@ -173,11 +176,8 @@ document.addEventListener('mouseover', () => {
     }, 800)
 })
 
+
+
 document.addEventListener('mouseout', () => {
     clearTimeout(timeoutId)
 })
-
-/* main.addEventListener('mouseover', () => {
-    afterLoginWindow.style.display = ''    
-
-}) */
