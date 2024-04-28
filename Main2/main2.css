@@ -19,14 +19,17 @@
 }
 
 
-p{
+p {
     margin-bottom: 0;
 }
 
 img {
     filter: brightness(80%);
 }
-h2, h3, h4 {
+
+h2,
+h3,
+h4 {
     font-size: 1.2rem;
     margin-bottom: 0;
 }
@@ -300,7 +303,7 @@ header h4 {
 }
 
 
-.themeChangeBlock{
+.themeChangeBlock {
     width: 100%;
     height: 85%;
     background-color: rgba(15, 11, 11, 0.5);
@@ -436,7 +439,7 @@ header h4 {
 
 .settings {
     display: flex;
-    height: 25rem;  
+    height: 25rem;
     margin-top: 30px;
     position: relative;
 }
@@ -489,12 +492,13 @@ header h4 {
     background-color: rgb(202, 200, 200);
 }
 
-.settingsBlock{
+.settingsBlock {
     width: 100%;
     height: 85%;
     background-color: rgba(15, 11, 11, 0.5);
     z-index: 1;
     position: absolute;
     display: none;
-    
+
 }
+
