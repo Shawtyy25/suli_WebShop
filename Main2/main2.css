@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -45,6 +51,7 @@ header {
     display: flex;
     padding: 5px 100px !important;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -65,10 +72,11 @@ header {
     z-index: 1;
     align-items: center !important;
     margin-left: 50px;
+    width: 900px;
 }
 
 #search {
-    width: 900px;
+    width: 100%;
     padding: 10px;
     border-radius: 20px;
     outline: none;
@@ -142,7 +150,7 @@ header h4 {
     display: none;
     font-weight: bold;
     flex-direction: column;
-    width: 280px;
+    max-width: 280px;
     background-color: rgb(165, 165, 165);
     left: -10%;
     padding: 10px;
@@ -194,7 +202,7 @@ header h4 {
     display: none;
     font-weight: bold;
     flex-direction: column;
-    width: 200px;
+    max-width: 200px;
     background-color: rgb(165, 165, 165);
     left: 10%;
     padding: 10px;
@@ -325,7 +333,7 @@ header h4 {
     font-family: "Ubuntu", sans-serif;
     gap: 30px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
     animation: transitionInWindow .4s;
     top: 0;
 }
@@ -430,11 +438,12 @@ header h4 {
     position: absolute;
     z-index: 10;
     display: flex;
-    width: 500px;
+    max-width: 500px;
     position: relative;
     flex-direction: column;
     margin: 0 auto;
     animation: transitionInWindow .4s;
+
 }
 
 .settings {
@@ -502,3 +511,138 @@ header h4 {
 
 }
 
+
+
+@media (max-width: 1300px) {
+    .logo h2{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    header{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 40px !important;
+        justify-content: space-between;
+    }
+
+    .logo{
+        display: none;
+    }
+    .loginDiv{
+        padding-left: 0;
+    }
+    .searchbar{
+        margin-left: 0 !important;   
+    }
+
+    .loginWindowAfter{
+        left: -10%;
+    }
+
+    .LoginWindow {
+        left: -20% !important;
+    }
+}
+
+@media (max-width: 858px) {
+    header {
+        min-width: 858px;
+    }
+
+    .themeChangeBlock {
+        min-width: 858px;
+    }
+    .themeChange {
+        max-width: 80%;
+    }
+
+    .settingsBlock {
+        min-width: 858px;
+    }
+    .settingsDiv  {
+        font-size: 1.2rem;
+    }
+    .settings {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 750px) {
+    header{
+        min-height: 220px;
+    }
+    header h4{
+        font-size: 1.4rem;
+    }
+    #search{
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .searchbar{
+        max-width: 750px;
+    }
+    header h4{
+        font-size: 1.4rem;
+    }
+
+    .favouritesWindow {
+        left: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    header {
+        min-height: 250px;
+        padding: 30px 70px 5px !important;
+    }
+    #search{
+        font-size: 1.5rem;
+    }
+
+    header h4{
+        font-size: 1.8rem !important;
+    }
+
+    .favouritesWindow {
+        left: -10% !important;
+    }
+
+    .cartWindow{
+        left: -15% !important;
+    }
+
+    .LoginWindow {
+        left: -10% !important;
+    }
+}
+
+@media (max-width: 1386px) {
+    .carousel-control-prev, .carousel-control-next {
+        z-index: 0;
+    }
+    .carousel-inner{
+        z-index: -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .settingsBlock{
+        padding: 0 !important;
+    }
+
+    .SleftSide, .SrightSide{
+        width: 100vw;
+        height: 100vh;
+    }
+}

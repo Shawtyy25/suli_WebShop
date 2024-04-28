@@ -101,6 +101,8 @@ const productTexth4 = document.querySelector('.productText h4')
 const productTexth2 = document.querySelector('.productText h2')
 const cartIncludeButton = document.querySelector('.cartInclude')
 const main = document.querySelector('main')
+const settings_a = document.querySelectorAll('.settings_a')
+const searchButton = document.querySelector('.searchButton')
 
 
 
@@ -182,4 +184,12 @@ document.addEventListener('mouseout', () => {
     clearTimeout(timeoutId)
 })
 
+settings_a.forEach(item => {
+    item.addEventListener('click', () => {
+        alert('Nem működik!')
+    })    
+});
 
+searchButton.addEventListener('click', () => {
+    alert('Nem működik!')
+})
