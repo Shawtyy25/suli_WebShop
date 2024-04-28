@@ -65,7 +65,7 @@ loginButton.addEventListener('click', () => {
         })
 
         if (found) {
-            window.location.href = '../Main/main.html'
+            window.location.href = '../Main2/main2.html'
         } else{
             errorMessege.style.display = 'block'
             wrongLogin(loginWindow, email_Input, password_Input)
@@ -82,6 +82,6 @@ reg_button.addEventListener('click', () => {
 })
 
 exit.addEventListener('click', () => {
-    window.location.href = '../Main/main.html'
+    window.location.href = '../Main2/main2.html'
 })
 
