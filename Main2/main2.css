@@ -635,14 +635,3 @@ header h4 {
         z-index: -1;
     }
 }
-
-@media (max-width: 700px) {
-    .settingsBlock{
-        padding: 0 !important;
-    }
-
-    .SleftSide, .SrightSide{
-        width: 100vw;
-        height: 100vh;
-    }
-}
