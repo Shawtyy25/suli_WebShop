@@ -10,9 +10,9 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
         currentWindow.style.display = 'flex'
     })
 
-    currentWindow.addEventListener('mouseout', () => {
+    /* currentWindow.addEventListener('mouseout', () => {
         currentWindow.style.display = ''
-    })
+    }) */
 }
 
 
@@ -103,7 +103,7 @@ const cartIncludeButton = document.querySelector('.cartInclude')
 const main = document.querySelector('main')
 const settings_a = document.querySelectorAll('.settings_a')
 const searchButton = document.querySelector('.searchButton')
-
+const section = document.querySelector('section')
 
 
 if (loginData_value.textContent == 'Bejelentkezés') {
@@ -167,22 +167,37 @@ closeWindowSettings.addEventListener('click', () => {
 
 
 
-let timeoutId
+let timeoutIdMain
+
+let timeoutIdSection
 
 
-document.addEventListener('mouseover', () => {
-    timeoutId = setTimeout(() => {
+main.addEventListener('mouseover', () => {
+    timeoutIdMain = setTimeout(() => {
         afterLoginWindow.style.display = ''
         favouritesWindow.style.display = ''
         cartWindow.style.display = ''
+        loginWindow.style.display = ''
     }, 800)
 })
 
-
-
-document.addEventListener('mouseout', () => {
-    clearTimeout(timeoutId)
+section.addEventListener('mouseover', () => {
+    timeoutIdSection = setTimeout(() => {
+        afterLoginWindow.style.display = ''
+        favouritesWindow.style.display = ''
+        cartWindow.style.display = ''
+        loginWindow.style.displayy = ''
+    }, 800)
 })
+
+section.addEventListener('mouseout', () => {
+    clearTimeout(timeoutIdSection)
+})
+main.addEventListener('mouseout', () => {
+    clearTimeout(timeoutIdMain)
+})
+
+
 
 settings_a.forEach(item => {
     item.addEventListener('click', () => {
@@ -192,4 +207,8 @@ settings_a.forEach(item => {
 
 searchButton.addEventListener('click', () => {
     alert('Nem működik!')
+})
+
+afterLoginWindow.addEventListener('mouseover', () => {
+    afterLoginWindow.style.display = 'flex'
 })

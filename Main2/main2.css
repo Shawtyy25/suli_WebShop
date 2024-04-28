@@ -225,9 +225,11 @@ header h4 {
 
 .logout {
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
     align-items: center;
     justify-content: center;
+    transition: all .2s;
+    padding: 0px 10px;
 }
 
 .logout i {
