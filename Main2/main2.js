@@ -248,10 +248,6 @@ productShowoutExit.addEventListener("click", () => {
     webBody.style.overflow = ""
 })
 
-leftPicturesFirstIMG.addEventListener("click", () => {
-    mainPictureIMG.style.backgroundImage = "url(./img/carousel1.jpg)"
-    leftPicturesFirstIMG.style.backgroundImage = "url(./img/carousel4.jpg)"
-})
 
 
 settings_a.forEach(item => {

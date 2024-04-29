@@ -149,8 +149,8 @@ main{
 
 .productShowout{
     display: none;
-    width: 95vw;
-    height: 95vh;
+    width: 70vw;
+    height: 85vh;
     background-color: white;
     position: fixed;
     z-index: 1000;
@@ -160,6 +160,7 @@ main{
     justify-content: space-between;
     padding: 2rem;
     gap: 1rem;
+    border-radius: 20px;
 }
 
 .productShowoutContent{
@@ -169,16 +170,17 @@ main{
     gap: 1rem;
     position: relative;
 }
+.closeWindowProduct{
+    position: absolute;
+    z-index: 10;
+    height: 20px;
+    right: 20px;
+    top: 10px;
+}
 
 #productShowoutExit{
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
     color: black;
     font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     transition: all .3s;
 }
@@ -204,15 +206,15 @@ main{
 }
 
 .leftPicturesFirstIMG{
-    background-image: url("./img/carousel1.jpg");
+    background-image: url("./img/fujiXT20hatul.jpg");
 }
 
 .leftPicturesSecondIMG{
-    background-image: url("./img/carousel2.jpg");
+    background-image: url("./img/FUJIXT20felul.jpg");
 }
 
 .leftPicturesThirdIMG{
-    background-image: url("./img/carousel3.jpg");
+    background-image: url("./img/xt20.jpeg");
 }
 
 .rightDescription{
@@ -231,13 +233,12 @@ main{
 }
 
 .mainPicture, .mainPictureIMG{
-    width: 50vw;
+    width: 40vw;
     height: 100%;
 }
 
 .mainPictureIMG{
-    background-image: url("./img/carousel4.jpg");
-    background-size: cover;
+    background-image: url("./img/fujiXT20hatul.jpg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: zoom-in;
