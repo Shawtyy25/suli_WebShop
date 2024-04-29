@@ -203,7 +203,7 @@ settings_a.forEach(item => {
     item.addEventListener('click', () => {
         alert('Nem működik!')
     })    
-});
+})
 
 searchButton.addEventListener('click', () => {
     alert('Nem működik!')
