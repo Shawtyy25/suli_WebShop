@@ -43,6 +43,7 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 #carouselBg1{
@@ -58,7 +59,6 @@ main{
 }
 
 .productSlide{
-    /* background-color: blue; */
     margin-top: 5rem;
 }
 
@@ -79,9 +79,10 @@ main{
 }
 
 .productCard{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     width: 20rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .productCardHeader{
@@ -110,16 +111,21 @@ main{
 }
 
 .productCardText{
-    padding: 0 1rem 1rem 1rem;
+    padding: .5rem 1rem 1rem 1rem;
     border-radius: 0 0 1rem 1rem;
 }
 
 .productCardRating{
     display: flex;
+    align-items: center;
 }
 
 .productCardRatingStars{
     margin-right: 1rem;
+}
+
+.productCardRating h6{
+    margin: 0;
 }
 
 .productCardPrice{
@@ -141,8 +147,156 @@ main{
     background-color: rgba(42, 42, 42, 0.5);
 }
 
+.productShowout{
+    display: none;
+    width: 95vw;
+    height: 95vh;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 1rem;
+}
 
+.productShowoutContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+}
 
+#productShowoutExit{
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#productShowoutExit:hover{
+    color: red;
+}
+
+.leftPictures{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.leftPicturesFirstIMG, .leftPicturesSecondIMG, .leftPicturesThirdIMG{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 8vw;
+    height: 15vh;
+    cursor: pointer;
+}
+
+.leftPicturesFirstIMG{
+    background-image: url("./img/carousel1.jpg");
+}
+
+.leftPicturesSecondIMG{
+    background-image: url("./img/carousel2.jpg");
+}
+
+.leftPicturesThirdIMG{
+    background-image: url("./img/carousel3.jpg");
+}
+
+.rightDescription{
+    width: 30%;
+    position: relative;
+}
+
+.rightDescription p{
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.mainPicture{
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.mainPicture, .mainPictureIMG{
+    width: 50vw;
+    height: 100%;
+}
+
+.mainPictureIMG{
+    background-image: url("./img/carousel4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: zoom-in;
+    position: absolute;
+    animation-duration: 1s;
+    top: 0;
+    left: 0;
+}
+
+@keyframes flowout {
+    from{
+        top: -20rem;
+    }
+    to{
+        top: 0;
+    }
+}
+
+.productShowoutButton{
+    border: 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .4rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.productShowoutButton i, .productShowoutButton h6{
+    height: 2.5rem;
+    padding: .5rem 1rem;
+}
+
+.productShowoutButton i{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-top-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    font-size: 1.3rem;
+}
+
+.productShowoutButton h6{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: white;
+    border-top-left-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+    width: 100%;
+}
 
 
 
@@ -157,7 +311,6 @@ footer{
     display: flex;
     width: 70%;
     margin: 2rem auto;
-    /* gap: 2rem; */
     justify-content: space-between;
 }
 
