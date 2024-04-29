@@ -16,7 +16,7 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
 }
 
 
-function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg) {
+function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -42,10 +42,15 @@ function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext
     productTextH4.style.color = 'var(--lightColor)'
     
     cartIncludeBg.style.backgroundColor = 'var(--ButtonColor)'
+
+    footer.style.backgroundColor = 'var(--darkBgNav)'
+
+    leftSide.style.backgroundColor = 'var(--darkBgNav)'
+    rightSide.style.backgroundColor = 'var(--darkNav)'
 }
 
 
-function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg) {
+function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--lightNav)'
     });
@@ -70,6 +75,11 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtex
     productTextH4.style.color = ''
     
     cartIncludeBg.style.backgroundColor = ''
+
+    footer.style.backgroundColor = ''
+
+    leftSide.style.backgroundColor = ''
+    rightSide.style.backgroundColor = ''    
 }
 
 const loginData_value = document.querySelector('.loginData h4')
@@ -104,6 +114,9 @@ const main = document.querySelector('main')
 const settings_a = document.querySelectorAll('.settings_a')
 const searchButton = document.querySelector('.searchButton')
 const section = document.querySelector('section')
+const footerContent = document.querySelector('footer')
+const sLeftSide = document.querySelector('.SleftSide')
+const srightSide = document.querySelector('.SrightSide')
 
 
 if (loginData_value.textContent == 'Bejelentkezés') {
@@ -146,13 +159,31 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton)
+    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide)
     themeChange.style.display = ''
+    srightSide.style.color = 'lightgray'
+    settings_a.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = 'gray'
+        })
+        item.addEventListener('mouseout', () => {
+            item.style.backgroundColor = ''
+        })
+    })
 })
 
 lightT_Div.addEventListener('click', () => {
-    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton)
+    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide)
     themeChange.style.display = ''
+    srightSide.style.color = ''
+    settings_a.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = ''
+        })
+        item.addEventListener('mouseout', () => {
+            item.style.backgroundColor = ''
+        })
+    })
 })
 
 s_Settings.addEventListener('click', () => {
