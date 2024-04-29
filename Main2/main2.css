@@ -3,7 +3,9 @@
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
 
 
 * {
@@ -465,7 +467,7 @@ header h4 {
     border-radius: 20px 0 0 20px;
 }
 
-.SleftSide a{
+.SleftSide a {
     color: white;
 }
 
@@ -523,31 +525,33 @@ header h4 {
 
 
 @media (max-width: 1300px) {
-    .logo h2{
+    .logo h2 {
         display: none;
     }
 }
 
 
 @media (max-width: 1100px) {
-    header{
+    header {
         flex-wrap: wrap;
         justify-content: center;
         padding-top: 40px !important;
         justify-content: space-between;
     }
 
-    .logo{
+    .logo {
         display: none;
     }
-    .loginDiv{
+
+    .loginDiv {
         padding-left: 0;
     }
-    .searchbar{
-        margin-left: 0 !important;   
+
+    .searchbar {
+        margin-left: 0 !important;
     }
 
-    .loginWindowAfter{
+    .loginWindowAfter {
         left: -10%;
     }
 
@@ -564,6 +568,7 @@ header h4 {
     .themeChangeBlock {
         min-width: 858px;
     }
+
     .themeChange {
         max-width: 80%;
     }
@@ -571,22 +576,26 @@ header h4 {
     .settingsBlock {
         min-width: 858px;
     }
-    .settingsDiv  {
+
+    .settingsDiv {
         font-size: 1.2rem;
     }
+
     .settings {
         font-size: 1.3rem;
     }
 }
 
 @media (max-width: 750px) {
-    header{
+    header {
         min-height: 220px;
     }
-    header h4{
+
+    header h4 {
         font-size: 1.4rem;
     }
-    #search{
+
+    #search {
         font-size: 1.5rem;
     }
 
@@ -598,10 +607,12 @@ header h4 {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .searchbar{
+
+    .searchbar {
         max-width: 750px;
     }
-    header h4{
+
+    header h4 {
         font-size: 1.4rem;
     }
 
@@ -615,11 +626,12 @@ header h4 {
         min-height: 250px;
         padding: 30px 70px 5px !important;
     }
-    #search{
+
+    #search {
         font-size: 1.5rem;
     }
 
-    header h4{
+    header h4 {
         font-size: 1.8rem !important;
     }
 
@@ -627,7 +639,7 @@ header h4 {
         left: -10% !important;
     }
 
-    .cartWindow{
+    .cartWindow {
         left: -15% !important;
     }
 
@@ -637,10 +649,13 @@ header h4 {
 }
 
 @media (max-width: 1386px) {
-    .carousel-control-prev, .carousel-control-next {
+
+    .carousel-control-prev,
+    .carousel-control-next {
         z-index: 0;
     }
-    .carousel-inner{
+
+    .carousel-inner {
         z-index: -1;
     }
 }
