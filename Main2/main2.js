@@ -101,8 +101,12 @@ const productTexth4 = document.querySelector('.productText h4')
 const productTexth2 = document.querySelector('.productText h2')
 const cartIncludeButton = document.querySelector('.cartInclude')
 const main = document.querySelector('main')
-
-
+const productCard = document.querySelectorAll(".productCard")
+const productShowout = document.querySelector(".productShowout")
+const webBody = document.querySelector("body")
+const productShowoutExit = document.querySelector("#productShowoutExit")
+const mainPictureIMG = document.querySelector(".mainPictureIMG")
+const leftPicturesFirstIMG = document.querySelector(".leftPicturesFirstIMG")
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -182,4 +186,21 @@ document.addEventListener('mouseout', () => {
     clearTimeout(timeoutId)
 })
 
+productCard.forEach(item => {
+    item.addEventListener("click", () => {
+        productShowout.style.display = "flex"
+        webBody.style.overflow = "hidden"
+        webBody.style.backgroundColor = "rgba(40,40,40,.7)"
+    })    
+})
 
+productShowoutExit.addEventListener("click", () => {
+    productShowout.style.display = "none"
+    webBody.style.backgroundColor = ""
+    webBody.style.overflow = ""
+})
+
+leftPicturesFirstIMG.addEventListener("click", () => {
+    mainPictureIMG.style.backgroundImage = "url(./img/carousel1.jpg)"
+    leftPicturesFirstIMG.style.backgroundImage = "url(./img/carousel4.jpg)"
+})
