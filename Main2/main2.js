@@ -119,6 +119,25 @@ function Xiaomi_card( productWindow, firstImage, secondImage, thirdImage, mainIm
     })
 }
 
+function TV_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/TV_2.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/TV_3.jpg')"
+    mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    productContentHeader.innerHTML = '<h1>Samsung UE65CU7172UXXH Smart LED Televízió<h1>'
+
+    firstImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    })
+    secondImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/TV_2.jpg')"
+    })
+    thirdImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/TV_3.jpg')"
+    })
+}
+
 const loginData_value = document.querySelector('.loginData h4')
 const loginForm = document.querySelector('.loginForm')
 const loginDiv = document.querySelector('.loginDiv')
@@ -165,6 +184,8 @@ const leftPicturesSecondIMG = document.querySelector('.leftPicturesSecondIMG')
 const leftPicturesThirdIMG = document.querySelector('.leftPicturesThirdIMG')
 const productContentH1 = document.querySelector('.productContentH1')
 const XiaomiWindow = document.querySelector('.Xiaomi')
+const TvWindow = document.querySelector('.TV')
+const firstPic = document.querySelector('.firstPic')
 
 
 if (loginData_value.textContent == 'Bejelentkezés') {
@@ -312,4 +333,8 @@ DJIwindow.addEventListener('click', () => {
 
 XiaomiWindow.addEventListener('click', () => {
     Xiaomi_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+TvWindow.addEventListener('click', () => {
+    TV_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
 })

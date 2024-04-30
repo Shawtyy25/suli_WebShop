@@ -123,6 +123,10 @@ main {
     background-image: url(./img/XIAOMI_1.jpg);
 }
 
+.TvBG{
+    background-image: url(./img/TV_1.jpg);
+}
+
 .productCardText {
     padding: .5rem 1rem 1rem 1rem;
     border-radius: 0 0 1rem 1rem;
