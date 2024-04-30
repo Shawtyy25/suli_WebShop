@@ -137,20 +137,20 @@ function TV_card( productWindow, firstImage, secondImage, thirdImage, mainImage,
 
 function Laptop_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
     productWindow.style.display = 'flex'
-    firstImage.style.backgroundImage = "url('./img/TV_1.jpg')"
-    secondImage.style.backgroundImage = "url('./img/TV_2.jpg')"
-    thirdImage.style.backgroundImage = "url('./img/TV_3.jpg')"
-    mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
-    productContentHeader.innerHTML = '<h1>Samsung UE65CU7172UXXH Smart LED Televízió<h1>'
+    firstImage.style.backgroundImage = "url('./img/LAPTOP_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/LAPTOP_2.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/LAPTOP_3.jpg')"
+    mainImage.style.backgroundImage = "url('./img/LAPTOP_1.jpg')"
+    productContentHeader.innerHTML = '<h1>HP 250 G8 15.6" FullHD laptop, Intel® Core™ i5-1135G7<h1>'
 
     firstPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+        mainImage.style.backgroundImage = "url('./img/LAPTOP_1.jpg')"
     })
     secondPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/TV_2.jpg')"
+        mainImage.style.backgroundImage = "url('./img/LAPTOP_2.jpg')"
     })
     thirdPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/TV_3.jpg')"
+        mainImage.style.backgroundImage = "url('./img/LAPTOP_3.jpg')"
     })
 }
 
@@ -206,8 +206,9 @@ const firstPic = document.querySelector('.firstPic')
 const secondPic = document.querySelector('.secondPic')
 const thirdPic = document.querySelector('.thirdPic')
 const FujiWindow = document.querySelector('.Fuji')
-const productList = document.querySelector(".productList");
-const slideButtons = document.querySelectorAll(".slideButton");
+const productList = document.querySelector(".productList")
+const slideButtons = document.querySelectorAll(".slideButton")
+const LaptopWindow = document.querySelector('.Laptop')
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -366,4 +367,8 @@ XiaomiWindow.addEventListener('click', () => {
 
 TvWindow.addEventListener('click', () => {
     TV_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+LaptopWindow.addEventListener('click', () => {
+    Laptop_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
 })
