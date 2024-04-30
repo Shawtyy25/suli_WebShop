@@ -84,40 +84,38 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtex
 
 function DJI_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
     productWindow.style.display = 'flex'
-    firstImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
-    secondImage.style.backgroundImage = "url('./img/DJIFull.webp')"
-    thirdImage.style.backgroundImage = "url('./img/DJI_Up.webp')"
-    mainImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    firstImage.style.backgroundImage = "url('./img/DJI_1.png')"
+    secondImage.style.backgroundImage = "url('./img/DJI_2.png')"
+    thirdImage.style.backgroundImage = "url('./img/DJI_3.jpg')"
+    mainImage.style.backgroundImage = "url('./img/DJI_1.png')"
     productContentHeader.innerHTML = '<h1>DJI Mavic Air 2S Fly More Combo<h1>'
 
     firstImage.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+        mainImage.style.backgroundImage = "url('./img/DJI_1.png')"
     })
     secondImage.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/DJIFull.webp')"
-        mainImage.style.backgroundSize = 'cover'
+        mainImage.style.backgroundImage = "url('./img/DJI_2.png')"
     })
     thirdImage.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/DJI_Up.webp')"
+        mainImage.style.backgroundImage = "url('./img/DJI_3.jpg')"
     })
 }
-function Fuji_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+function Xiaomi_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
     productWindow.style.display = 'flex'
-    firstImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
-    secondImage.style.backgroundImage = "url('./img/xt20.jpeg')"
-    thirdImage.style.backgroundImage = "url('./img/FUJIXT20felul.jpg')"
-    mainImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
-    productContentHeader.innerHTML = '<h1>Fujifilm X-T20<h1>'
+    firstImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/XIAOMI_2.png')"
+    thirdImage.style.backgroundImage = "url('./img/XIAOMI_3.jpg')"
+    mainImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
+    productContentHeader.innerHTML = '<h1>Xiaomi Redmi Note 11 PRO+ 5G Mobiltelefon<h1>'
 
     firstImage.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+        mainImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
     })
     secondImage.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/xt20.jpeg')"
-        mainImage.style.backgroundSize = 'cover'
+        mainImage.style.backgroundImage = "url('./img/XIAOMI_2.png')"
     })
     thirdImage.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/FUJIXT20felul.jpg')"
+        mainImage.style.backgroundImage = "url('./img/XIAOMI_3.jpg')"
     })
 }
 
@@ -154,7 +152,7 @@ const productCard = document.querySelectorAll(".productCard")
 const productShowout = document.querySelector(".productShowoutDiv")
 const webBody = document.querySelector("body")
 const productShowoutExit = document.querySelector("#productShowoutExit")
-const mainPictureIMG = document.querySelector(".mainPictureIMG")
+const mainPicture = document.querySelector(".mainPicture")
 const leftPicturesFirstIMG = document.querySelector(".leftPicturesFirstIMG")
 const settings_a = document.querySelectorAll('.settings_a')
 const searchButton = document.querySelector('.searchButton')
@@ -166,7 +164,7 @@ const DJIwindow = document.querySelector('.DJI')
 const leftPicturesSecondIMG = document.querySelector('.leftPicturesSecondIMG')
 const leftPicturesThirdIMG = document.querySelector('.leftPicturesThirdIMG')
 const productContentH1 = document.querySelector('.productContentH1')
-const FujiWindow = document.querySelector('.Fuji')
+const XiaomiWindow = document.querySelector('.Xiaomi')
 
 
 if (loginData_value.textContent == 'Bejelentkezés') {
@@ -308,10 +306,10 @@ afterLoginWindow.addEventListener('mouseover', () => {
 })
 
 DJIwindow.addEventListener('click', () => {
-    DJI_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
+    DJI_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
     
 })
 
-FujiWindow.addEventListener('click', () => {
-    Fuji_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
+XiaomiWindow.addEventListener('click', () => {
+    Xiaomi_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
 })
