@@ -10,9 +10,6 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
         currentWindow.style.display = 'flex'
     })
 
-    /* currentWindow.addEventListener('mouseout', () => {
-        currentWindow.style.display = ''
-    }) */
 }
 
 
@@ -137,6 +134,26 @@ function TV_card( productWindow, firstImage, secondImage, thirdImage, mainImage,
         mainImage.style.backgroundImage = "url('./img/TV_3.jpg')"
     })
 }
+
+function Laptop_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/TV_2.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/TV_3.jpg')"
+    mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    productContentHeader.innerHTML = '<h1>Samsung UE65CU7172UXXH Smart LED Televízió<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/TV_2.jpg')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/TV_3.jpg')"
+    })
+}
+
 
 const loginData_value = document.querySelector('.loginData h4')
 const loginForm = document.querySelector('.loginForm')
