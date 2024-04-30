@@ -158,14 +158,16 @@ main {
 }
 
 .productShowoutDiv{
-    background-color:rgb(0, 0, 0);
-    height: 100%;
-    width: 100%;
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 201vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    z-index: 100;
 }
 
 .productShowout {
-    display: none;
+    display: flex;
     width: 70vw;
     height: 85vh;
     background-color: white;
@@ -178,6 +180,7 @@ main {
     padding: 2rem;
     gap: 1rem;
     border-radius: 20px;
+    transition: all .2s;
 }
 
 .productShowoutContent {
@@ -217,6 +220,7 @@ main {
 .firstPic {
     position: relative;
     cursor: pointer;
+    
 }
 
 .firstPic h1 {
@@ -224,6 +228,7 @@ main {
     top: 35%;
     color: white;
     right: 45%;
+    
 
 }
 
@@ -353,18 +358,18 @@ main {
 }
 
 .productShowoutButton i {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     border-top-right-radius: .4rem;
     border-bottom-right-radius: .4rem;
     font-size: 1.3rem;
 }
 
 .productShowoutButton h6 {
-    background-color: blue;
+    background-color: var(--mainColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,4 +423,16 @@ footer {
 
 .footerContactIcons i:hover {
     background-color: rgb(56, 56, 56);
+}
+
+@keyframes transitionInWindow {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

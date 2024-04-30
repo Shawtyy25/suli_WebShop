@@ -112,7 +112,7 @@ const productTexth2 = document.querySelector('.productText h2')
 const cartIncludeButton = document.querySelector('.cartInclude')
 const main = document.querySelector('main')
 const productCard = document.querySelectorAll(".productCard")
-const productShowout = document.querySelector(".productShowout")
+const productShowout = document.querySelector(".productShowoutDiv")
 const webBody = document.querySelector("body")
 const productShowoutExit = document.querySelector("#productShowoutExit")
 const mainPictureIMG = document.querySelector(".mainPictureIMG")
@@ -238,7 +238,6 @@ productCard.forEach(item => {
     item.addEventListener("click", () => {
         productShowout.style.display = "flex"
         webBody.style.overflow = "hidden"
-        webBody.style.backgroundColor = "rgba(40,40,40,.7)"
     })    
 })
 
