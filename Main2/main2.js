@@ -10,13 +10,13 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
         currentWindow.style.display = 'flex'
     })
 
-    currentWindow.addEventListener('mouseout', () => {
+    /* currentWindow.addEventListener('mouseout', () => {
         currentWindow.style.display = ''
-    })
+    }) */
 }
 
 
-function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg) {
+function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -42,10 +42,15 @@ function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext
     productTextH4.style.color = 'var(--lightColor)'
     
     cartIncludeBg.style.backgroundColor = 'var(--ButtonColor)'
+
+    footer.style.backgroundColor = 'var(--darkBgNav)'
+
+    leftSide.style.backgroundColor = 'var(--darkBgNav)'
+    rightSide.style.backgroundColor = 'var(--darkNav)'
 }
 
 
-function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg) {
+function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--lightNav)'
     });
@@ -70,6 +75,50 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtex
     productTextH4.style.color = ''
     
     cartIncludeBg.style.backgroundColor = ''
+
+    footer.style.backgroundColor = ''
+
+    leftSide.style.backgroundColor = ''
+    rightSide.style.backgroundColor = ''    
+}
+
+function DJI_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    secondImage.style.backgroundImage = "url('./img/DJIFull.webp')"
+    thirdImage.style.backgroundImage = "url('./img/DJI_Up.webp')"
+    mainImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    productContentHeader.innerHTML = '<h1>DJI Mavic Air 2S Fly More Combo<h1>'
+
+    firstImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    })
+    secondImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/DJIFull.webp')"
+        mainImage.style.backgroundSize = 'cover'
+    })
+    thirdImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/DJI_Up.webp')"
+    })
+}
+function Fuji_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+    secondImage.style.backgroundImage = "url('./img/xt20.jpeg')"
+    thirdImage.style.backgroundImage = "url('./img/FUJIXT20felul.jpg')"
+    mainImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+    productContentHeader.innerHTML = '<h1>Fujifilm X-T20<h1>'
+
+    firstImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+    })
+    secondImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/xt20.jpeg')"
+        mainImage.style.backgroundSize = 'cover'
+    })
+    thirdImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/FUJIXT20felul.jpg')"
+    })
 }
 
 const loginData_value = document.querySelector('.loginData h4')
@@ -102,11 +151,23 @@ const productTexth2 = document.querySelector('.productText h2')
 const cartIncludeButton = document.querySelector('.cartInclude')
 const main = document.querySelector('main')
 const productCard = document.querySelectorAll(".productCard")
-const productShowout = document.querySelector(".productShowout")
+const productShowout = document.querySelector(".productShowoutDiv")
 const webBody = document.querySelector("body")
 const productShowoutExit = document.querySelector("#productShowoutExit")
 const mainPictureIMG = document.querySelector(".mainPictureIMG")
 const leftPicturesFirstIMG = document.querySelector(".leftPicturesFirstIMG")
+const settings_a = document.querySelectorAll('.settings_a')
+const searchButton = document.querySelector('.searchButton')
+const section = document.querySelector('section')
+const footerContent = document.querySelector('footer')
+const sLeftSide = document.querySelector('.SleftSide')
+const srightSide = document.querySelector('.SrightSide')
+const DJIwindow = document.querySelector('.DJI')
+const leftPicturesSecondIMG = document.querySelector('.leftPicturesSecondIMG')
+const leftPicturesThirdIMG = document.querySelector('.leftPicturesThirdIMG')
+const productContentH1 = document.querySelector('.productContentH1')
+const FujiWindow = document.querySelector('.Fuji')
+
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -148,13 +209,31 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton)
+    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide)
     themeChange.style.display = ''
+    srightSide.style.color = 'lightgray'
+    settings_a.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = 'gray'
+        })
+        item.addEventListener('mouseout', () => {
+            item.style.backgroundColor = ''
+        })
+    })
 })
 
 lightT_Div.addEventListener('click', () => {
-    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton)
+    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide)
     themeChange.style.display = ''
+    srightSide.style.color = ''
+    settings_a.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = ''
+        })
+        item.addEventListener('mouseout', () => {
+            item.style.backgroundColor = ''
+        })
+    })
 })
 
 s_Settings.addEventListener('click', () => {
@@ -169,28 +248,40 @@ closeWindowSettings.addEventListener('click', () => {
 
 
 
-let timeoutId
+let timeoutIdMain
+
+let timeoutIdSection
 
 
-document.addEventListener('mouseover', () => {
-    timeoutId = setTimeout(() => {
+main.addEventListener('mouseover', () => {
+    timeoutIdMain = setTimeout(() => {
         afterLoginWindow.style.display = ''
         favouritesWindow.style.display = ''
         cartWindow.style.display = ''
+        loginWindow.style.display = ''
     }, 800)
 })
 
+section.addEventListener('mouseover', () => {
+    timeoutIdSection = setTimeout(() => {
+        afterLoginWindow.style.display = ''
+        favouritesWindow.style.display = ''
+        cartWindow.style.display = ''
+        loginWindow.style.displayy = ''
+    }, 800)
+})
 
-
-document.addEventListener('mouseout', () => {
-    clearTimeout(timeoutId)
+section.addEventListener('mouseout', () => {
+    clearTimeout(timeoutIdSection)
+})
+main.addEventListener('mouseout', () => {
+    clearTimeout(timeoutIdMain)
 })
 
 productCard.forEach(item => {
     item.addEventListener("click", () => {
         productShowout.style.display = "flex"
         webBody.style.overflow = "hidden"
-        webBody.style.backgroundColor = "rgba(40,40,40,.7)"
     })    
 })
 
@@ -200,7 +291,27 @@ productShowoutExit.addEventListener("click", () => {
     webBody.style.overflow = ""
 })
 
-leftPicturesFirstIMG.addEventListener("click", () => {
-    mainPictureIMG.style.backgroundImage = "url(./img/carousel1.jpg)"
-    leftPicturesFirstIMG.style.backgroundImage = "url(./img/carousel4.jpg)"
+
+
+settings_a.forEach(item => {
+    item.addEventListener('click', () => {
+        alert('Nem működik!')
+    })    
+})
+
+searchButton.addEventListener('click', () => {
+    alert('Nem működik!')
+})
+
+afterLoginWindow.addEventListener('mouseover', () => {
+    afterLoginWindow.style.display = 'flex'
+})
+
+DJIwindow.addEventListener('click', () => {
+    DJI_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
+    
+})
+
+FujiWindow.addEventListener('click', () => {
+    Fuji_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
 })
