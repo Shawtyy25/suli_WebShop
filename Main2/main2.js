@@ -188,6 +188,9 @@ const TvWindow = document.querySelector('.TV')
 const firstPic = document.querySelector('.firstPic')
 const secondPic = document.querySelector('.secondPic')
 const thirdPic = document.querySelector('.thirdPic')
+const FujiWindow = document.querySelector('.Fuji')
+const productList = document.querySelector(".productList");
+const slideButtons = document.querySelectorAll(".slideButton");
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -332,6 +335,16 @@ DJIwindow.addEventListener('click', () => {
     
 })
 
+    Fuji_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
+})
+    
+slideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const direction = button.id === "prevSlide" ? -1 : 1
+        const scrollAmount = productList.clientWidth * direction
+        productList.scrollBy({ left: scrollAmount, behavior: "smooth" })
+    })
+})
 XiaomiWindow.addEventListener('click', () => {
     Xiaomi_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
 })
