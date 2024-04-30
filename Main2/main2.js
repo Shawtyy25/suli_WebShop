@@ -82,6 +82,45 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtex
     rightSide.style.backgroundColor = ''    
 }
 
+function DJI_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    secondImage.style.backgroundImage = "url('./img/DJIFull.webp')"
+    thirdImage.style.backgroundImage = "url('./img/DJI_Up.webp')"
+    mainImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    productContentHeader.innerHTML = '<h1>DJI Mavic Air 2S Fly More Combo<h1>'
+
+    firstImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/DJI_Set.webp')"
+    })
+    secondImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/DJIFull.webp')"
+        mainImage.style.backgroundSize = 'cover'
+    })
+    thirdImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/DJI_Up.webp')"
+    })
+}
+function Fuji_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+    secondImage.style.backgroundImage = "url('./img/xt20.jpeg')"
+    thirdImage.style.backgroundImage = "url('./img/FUJIXT20felul.jpg')"
+    mainImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+    productContentHeader.innerHTML = '<h1>Fujifilm X-T20<h1>'
+
+    firstImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/FujiXT20hatul.jpg')"
+    })
+    secondImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/xt20.jpeg')"
+        mainImage.style.backgroundSize = 'cover'
+    })
+    thirdImage.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/FUJIXT20felul.jpg')"
+    })
+}
+
 const loginData_value = document.querySelector('.loginData h4')
 const loginForm = document.querySelector('.loginForm')
 const loginDiv = document.querySelector('.loginDiv')
@@ -123,6 +162,11 @@ const section = document.querySelector('section')
 const footerContent = document.querySelector('footer')
 const sLeftSide = document.querySelector('.SleftSide')
 const srightSide = document.querySelector('.SrightSide')
+const DJIwindow = document.querySelector('.DJI')
+const leftPicturesSecondIMG = document.querySelector('.leftPicturesSecondIMG')
+const leftPicturesThirdIMG = document.querySelector('.leftPicturesThirdIMG')
+const productContentH1 = document.querySelector('.productContentH1')
+const FujiWindow = document.querySelector('.Fuji')
 
 
 if (loginData_value.textContent == 'Bejelentkezés') {
@@ -261,4 +305,13 @@ searchButton.addEventListener('click', () => {
 
 afterLoginWindow.addEventListener('mouseover', () => {
     afterLoginWindow.style.display = 'flex'
+})
+
+DJIwindow.addEventListener('click', () => {
+    DJI_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
+    
+})
+
+FujiWindow.addEventListener('click', () => {
+    Fuji_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
 })

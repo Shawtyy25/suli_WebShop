@@ -115,10 +115,13 @@ main {
     background-color: white;
 }
 
-.DJI{
+.DJIBG{
     background-image: url(./img/DJIFull.webp);
 }
 
+.FujiBG{
+    background-image: url(./img/fujiXT20hatul.jpg);
+}
 
 .productCardText {
     padding: .5rem 1rem 1rem 1rem;
@@ -162,7 +165,7 @@ main {
     height: 201vh;
     width: 100vw;
     position: absolute;
-    display: flex;
+    display: none;
     z-index: 100;
 }
 
@@ -321,10 +324,6 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     cursor: zoom-in;
-    position: absolute;
-    animation-duration: 1s;
-    top: 0;
-    left: 0;
 }
 
 @keyframes flowout {
