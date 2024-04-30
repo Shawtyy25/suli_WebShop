@@ -64,8 +64,55 @@ main {
 }
 
 .productSlideshow {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.sliderWrapper{
+    position: relative;
+}
+  
+.slideButton {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
     display: flex;
-    gap: 2rem;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+  
+.slideButton:hover{
+    background: #404040;
+}
+  
+#prevSlide {
+    left: -25px;
+}
+  
+#nextSlide {
+    right: -25px;
+}
+  
+.productList{
+    display: grid;
+    grid-template-columns: repeat(10, 10fr);
+    gap: 1rem;
+    font-size: 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .productText {
@@ -80,7 +127,7 @@ main {
 }
 
 .productCard {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 20rem;
     border-radius: 1rem;
     cursor: pointer;
@@ -131,6 +178,8 @@ main {
 .productCardRating {
     display: flex;
     align-items: center;
+    justify-content: center;
+
 }
 
 .productCardRatingStars {
@@ -143,7 +192,7 @@ main {
 
 .productCardPrice {
     color: rgb(43, 201, 45);
-    text-shadow: 1px 1px rgb(201, 201, 201);
+    margin: 0;
 }
 
 .productCardBgHover {
@@ -433,5 +482,43 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@media (max-width:1500px) {
+    main{
+        width: 98%;
+    }
+}
+
+@media (max-width:1420px) {
+    .footerContent{
+        width: 95%;
+    }
+}
+
+@media (max-width:1040px) {
+    .footerContent{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media (max-width:972px) {
+    .footerContent{
+        justify-content: center;
+    }
+}
+
+@media (max-width:800px) {
+    .carouselSlide{
+        display: none;
+    }
+}
+
+@media (max-width:650px) {
+    .footerContent{
+        justify-content: space-between;
     }
 }

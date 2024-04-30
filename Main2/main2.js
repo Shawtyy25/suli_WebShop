@@ -167,7 +167,8 @@ const leftPicturesSecondIMG = document.querySelector('.leftPicturesSecondIMG')
 const leftPicturesThirdIMG = document.querySelector('.leftPicturesThirdIMG')
 const productContentH1 = document.querySelector('.productContentH1')
 const FujiWindow = document.querySelector('.Fuji')
-
+const productList = document.querySelector(".productList");
+const slideButtons = document.querySelectorAll(".slideButton");
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -314,4 +315,12 @@ DJIwindow.addEventListener('click', () => {
 
 FujiWindow.addEventListener('click', () => {
     Fuji_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
+})
+    
+slideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const direction = button.id === "prevSlide" ? -1 : 1
+        const scrollAmount = productList.clientWidth * direction
+        productList.scrollBy({ left: scrollAmount, behavior: "smooth" })
+    })
 })
