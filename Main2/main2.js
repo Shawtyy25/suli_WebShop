@@ -335,8 +335,6 @@ DJIwindow.addEventListener('click', () => {
     
 })
 
-    Fuji_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPictureIMG, productContentH1)
-})
     
 slideButtons.forEach(button => {
     button.addEventListener("click", () => {
