@@ -90,13 +90,13 @@ function DJI_card( productWindow, firstImage, secondImage, thirdImage, mainImage
     mainImage.style.backgroundImage = "url('./img/DJI_1.png')"
     productContentHeader.innerHTML = '<h1>DJI Mavic Air 2S Fly More Combo<h1>'
 
-    firstImage.addEventListener('click', () => {
+    firstPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/DJI_1.png')"
     })
-    secondImage.addEventListener('click', () => {
+    secondPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/DJI_2.png')"
     })
-    thirdImage.addEventListener('click', () => {
+    thirdPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/DJI_3.jpg')"
     })
 }
@@ -108,13 +108,13 @@ function Xiaomi_card( productWindow, firstImage, secondImage, thirdImage, mainIm
     mainImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
     productContentHeader.innerHTML = '<h1>Xiaomi Redmi Note 11 PRO+ 5G Mobiltelefon<h1>'
 
-    firstImage.addEventListener('click', () => {
+    firstPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
     })
-    secondImage.addEventListener('click', () => {
+    secondPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/XIAOMI_2.png')"
     })
-    thirdImage.addEventListener('click', () => {
+    thirdPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/XIAOMI_3.jpg')"
     })
 }
@@ -127,13 +127,13 @@ function TV_card( productWindow, firstImage, secondImage, thirdImage, mainImage,
     mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
     productContentHeader.innerHTML = '<h1>Samsung UE65CU7172UXXH Smart LED Televízió<h1>'
 
-    firstImage.addEventListener('click', () => {
+    firstPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
     })
-    secondImage.addEventListener('click', () => {
+    secondPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/TV_2.jpg')"
     })
-    thirdImage.addEventListener('click', () => {
+    thirdPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/TV_3.jpg')"
     })
 }
@@ -186,7 +186,8 @@ const productContentH1 = document.querySelector('.productContentH1')
 const XiaomiWindow = document.querySelector('.Xiaomi')
 const TvWindow = document.querySelector('.TV')
 const firstPic = document.querySelector('.firstPic')
-
+const secondPic = document.querySelector('.secondPic')
+const thirdPic = document.querySelector('.thirdPic')
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
