@@ -416,7 +416,7 @@ main.addEventListener('mouseover', () => {
         favouritesWindow.style.display = ''
         cartWindow.style.display = ''
         loginWindow.style.display = ''
-    }, 800)
+    }, 600)
 })
 
 section.addEventListener('mouseover', () => {
