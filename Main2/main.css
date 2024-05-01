@@ -168,16 +168,16 @@ main {
 }
 
 .XiaomiBG {
-    background-image: url(./img/XIAOMI_1.jpg);
+    background-image: url(./img/XIAOMI_1.png);
     background-size: 70% !important;
 }
 
 .TvBG {
-    background-image: url(./img/TV_1.jpg);
+    background-image: url(./img/TV_1.png);
 }
 
 .LaptopBG {
-    background-image: url(./img/LAPTOP_1.jpg);
+    background-image: url(./img/LAPTOP_1.png);
 }
 
 .RazerBG {
@@ -186,16 +186,16 @@ main {
 }
 
 .KeychronBG {
-    background-image: url(./img/KEYCHRON_1.jpg);
+    background-image: url(./img/KEYCHRON_1.png);
 }
 
 .AppleBG {
-    background-image: url(./img/APPLE_1.jpg);
+    background-image: url(./img/APPLE_1.png);
 
 }
 
 .VisionBG {
-    background-image: url(./img/VISION_2.jpg);
+    background-image: url(./img/VISION_2.png);
     background-size: 70% !important;
 }
 
@@ -204,9 +204,11 @@ main {
 }
 
 
+
 .productCardText {
     padding: .5rem 1rem 1rem 1rem;
     border-radius: 0 0 1rem 1rem;
+    height: 180px;
 }
 
 
@@ -214,7 +216,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    transform: translateY(50px); 
 }
 
 .productCardRatingStars {
