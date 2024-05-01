@@ -576,7 +576,8 @@ header h4 {
         max-width: 90%;
 
     }
-    .themes{
+
+    .themes {
         max-width: 90%;
     }
 
@@ -599,11 +600,13 @@ header h4 {
     header {
         min-height: 220px;
     }
+
     #search {
         font-size: 1.2rem;
     }
 
 }
+
 @media (max-width: 720px) {
     header {
         padding: 40px 50px 0 50px !important;
@@ -613,7 +616,7 @@ header h4 {
 @media (max-width: 598px) {
     .themeChange {
         min-height: 750px !important;
-    }  
+    }
 }
 
 @media (max-width: 640px) {
@@ -631,10 +634,12 @@ header h4 {
     header h4 {
         font-size: 1.1rem;
     }
-    .favourites{
+
+    .favourites {
         margin-left: 15px;
     }
-    .cart{
+
+    .cart {
         margin-left: 20px;
     }
 
@@ -642,9 +647,9 @@ header h4 {
         left: 20px;
     }
 
-      
 
-    .themes{
+
+    .themes {
         flex-wrap: wrap;
     }
 }
@@ -689,53 +694,62 @@ header h4 {
     }
 }
 
-@media (max-width: 490px){
-    header h4{
+@media (max-width: 490px) {
+    header h4 {
         font-size: 1rem !important;
     }
 }
+
 @media (max-width: 460px) {
-    .arrowdown{
+    .arrowdown {
         display: none;
     }
-    .loginDiv{
+
+    .loginDiv {
         pointer-events: none;
     }
-    .loginWindowAfter{
+
+    .loginWindowAfter {
         display: none;
     }
-    .LoginWindow{
+
+    .LoginWindow {
         display: none;
     }
-    .favourites{
+
+    .favourites {
         pointer-events: none;
     }
+
     .favouritesWindow {
         display: none;
     }
-    .cart{
+
+    .cart {
         pointer-events: none;
     }
-    .cartWindow{
+
+    .cartWindow {
         display: none;
     }
 }
 
-@media (max-width: 1330px ) {
-    .productShowout h1{
+@media (max-width: 1330px) {
+    .productShowout h1 {
         font-size: 1.8rem;
     }
 }
-@media (max-width: 1200px ) {
-    .productShowoutDiv{
+
+@media (max-width: 1200px) {
+    .productShowoutDiv {
         display: none !important;
     }
+
     .productShowout {
         pointer-events: none;
     }
+
     .productCards {
-        pointer-events:none;
+        pointer-events: none;
     }
 }
-
-
