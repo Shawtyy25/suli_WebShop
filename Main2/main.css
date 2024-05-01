@@ -414,7 +414,17 @@ main {
     left: 50%;
     transform: translate(-50%);
     width: 100%;
+    
 }
+.productShowoutButton h6{
+    transition: all .2s;
+}
+
+.productShowoutButton h6:hover{
+    background-color: rgb(35, 22, 207);
+}
+
+
 
 .productShowoutButton i,
 .productShowoutButton h6 {
