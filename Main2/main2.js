@@ -10,13 +10,10 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
         currentWindow.style.display = 'flex'
     })
 
-    /* currentWindow.addEventListener('mouseout', () => {
-        currentWindow.style.display = ''
-    }) */
 }
 
 
-function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide) {
+function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide, productIMG, productBG, mainIMG, productButton, productButtonCart) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -30,32 +27,44 @@ function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext
     header.style.backgroundColor = 'var(--darkBgNav)'
 
     carouselIMG.forEach(item => {
-        item.style.filter = 'brightness(60%)'
+        item.style.filter = 'brightness(80%)'
     })
 
     productcardtext.forEach(item => {
         item.style.backgroundColor = 'var(--darkCards)'
         item.style.color = 'var(--lightColor)'
     })
-    
+
     productTextH2.style.color = 'var(--ButtonColor)'
     productTextH4.style.color = 'var(--lightColor)'
-    
+
     cartIncludeBg.style.backgroundColor = 'var(--ButtonColor)'
 
     footer.style.backgroundColor = 'var(--darkBgNav)'
 
     leftSide.style.backgroundColor = 'var(--darkBgNav)'
     rightSide.style.backgroundColor = 'var(--darkNav)'
+
+    productIMG.forEach(item => {
+        item.style.filter = 'brightness(80%)'
+    })
+
+    productBG.style.backgroundColor = 'var(--darkNav)'
+    productBG.style.color = 'white'
+
+    mainIMG.style.backgroundColor = 'var(--darkCards)'
+
+    productButton.style.backgroundColor = 'var(--ButtonColor)'
+    productButtonCart.style.backgroundColor = 'var(--darkBgNav)'
 }
 
 
-function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide) {
+function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide, productIMG, productBG, mainIMG, productButton, productButtonCart) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--lightNav)'
     });
 
-    body.style.backgroundColor = 'var(--lightBg)';
+    body.style.backgroundColor = '';
     arrowUp.forEach(item => {
         item.style.color = 'var(--lightNav)';
     })
@@ -70,23 +79,35 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtex
         item.style.backgroundColor = ''
         item.style.color = ''
     })
-    
+
     productTextH2.style.color = ''
     productTextH4.style.color = ''
-    
+
     cartIncludeBg.style.backgroundColor = ''
 
     footer.style.backgroundColor = ''
 
     leftSide.style.backgroundColor = ''
-    rightSide.style.backgroundColor = ''    
+    rightSide.style.backgroundColor = ''
+
+    productIMG.forEach(item => {
+        item.style.filter = 'brightness(100%)'
+    })
+
+    productBG.style.backgroundColor = ''
+    productBG.style.color = ''
+
+    mainIMG.style.backgroundColor = ''
+
+    productButton.style.backgroundColor = ''
+    productButtonCart.style.backgroundColor = ''
 }
 
-function DJI_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+function DJI_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
     productWindow.style.display = 'flex'
     firstImage.style.backgroundImage = "url('./img/DJI_1.png')"
     secondImage.style.backgroundImage = "url('./img/DJI_2.png')"
-    thirdImage.style.backgroundImage = "url('./img/DJI_3.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/DJI_3.png')"
     mainImage.style.backgroundImage = "url('./img/DJI_1.png')"
     productContentHeader.innerHTML = '<h1>DJI Mavic Air 2S Fly More Combo<h1>'
 
@@ -97,46 +118,143 @@ function DJI_card( productWindow, firstImage, secondImage, thirdImage, mainImage
         mainImage.style.backgroundImage = "url('./img/DJI_2.png')"
     })
     thirdPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/DJI_3.jpg')"
+        mainImage.style.backgroundImage = "url('./img/DJI_3.png')"
     })
 }
-function Xiaomi_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+function Xiaomi_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
     productWindow.style.display = 'flex'
-    firstImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
+    firstImage.style.backgroundImage = "url('./img/XIAOMI_1.png')"
     secondImage.style.backgroundImage = "url('./img/XIAOMI_2.png')"
-    thirdImage.style.backgroundImage = "url('./img/XIAOMI_3.jpg')"
-    mainImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/XIAOMI_3.png')"
+    mainImage.style.backgroundImage = "url('./img/XIAOMI_1.png')"
     productContentHeader.innerHTML = '<h1>Xiaomi Redmi Note 11 PRO+ 5G Mobiltelefon<h1>'
 
     firstPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/XIAOMI_1.jpg')"
+        mainImage.style.backgroundImage = "url('./img/XIAOMI_1.png')"
     })
     secondPic.addEventListener('click', () => {
         mainImage.style.backgroundImage = "url('./img/XIAOMI_2.png')"
     })
     thirdPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/XIAOMI_3.jpg')"
+        mainImage.style.backgroundImage = "url('./img/XIAOMI_3.png')"
     })
 }
 
-function TV_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+function TV_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
     productWindow.style.display = 'flex'
-    firstImage.style.backgroundImage = "url('./img/TV_1.jpg')"
-    secondImage.style.backgroundImage = "url('./img/TV_2.jpg')"
-    thirdImage.style.backgroundImage = "url('./img/TV_3.jpg')"
-    mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+    firstImage.style.backgroundImage = "url('./img/TV_1.png')"
+    secondImage.style.backgroundImage = "url('./img/TV_2.webp')"
+    thirdImage.style.backgroundImage = "url('./img/TV_3.png')"
+    mainImage.style.backgroundImage = "url('./img/TV_1.png')"
     productContentHeader.innerHTML = '<h1>Samsung UE65CU7172UXXH Smart LED Televízió<h1>'
 
     firstPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/TV_1.jpg')"
+        mainImage.style.backgroundImage = "url('./img/TV_1.png')"
     })
     secondPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/TV_2.jpg')"
+        mainImage.style.backgroundImage = "url('./img/TV_2.webp')"
     })
     thirdPic.addEventListener('click', () => {
-        mainImage.style.backgroundImage = "url('./img/TV_3.jpg')"
+        mainImage.style.backgroundImage = "url('./img/TV_3.png')"
     })
 }
+
+function Laptop_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/LAPTOP_1.png')"
+    secondImage.style.backgroundImage = "url('./img/LAPTOP_2.png')"
+    thirdImage.style.backgroundImage = "url('./img/LAPTOP_3.png')"
+    mainImage.style.backgroundImage = "url('./img/LAPTOP_1.png')"
+    productContentHeader.innerHTML = '<h1>HP 250 G8 15.6" FullHD laptop, Intel® Core™ i5-1135G7<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/LAPTOP_1.png')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/LAPTOP_2.png')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/LAPTOP_3.png')"
+    })
+}
+function Razer_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/RAZER_1.webp')"
+    secondImage.style.backgroundImage = "url('./img/RAZER_2.webp')"
+    thirdImage.style.backgroundImage = "url('./img/RAZER_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/RAZER_1.webp')"
+    productContentHeader.innerHTML = '<h1>Razer DeathAdder Essential 2021 Gaming Egér, Fekete<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/RAZER_1.webp')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/RAZER_2.webp')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/RAZER_3.webp')"
+    })
+}
+
+function Keychron_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/KEYCHRON_1.png')"
+    secondImage.style.backgroundImage = "url('./img/KEYCHRON_2.png')"
+    thirdImage.style.backgroundImage = "url('./img/KEYCHRON_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/KEYCHRON_1.png')"
+    productContentHeader.innerHTML = '<h1>Keychron K2 vezeték nélküli mechanikus billentyűzet<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/KEYCHRON_1.png')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/KEYCHRON_2.png')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/KEYCHRON_3.webp')"
+    })
+}
+
+
+function Apple_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/APPLE_1.png')"
+    secondImage.style.backgroundImage = "url('./img/APPLE_2.png')"
+    thirdImage.style.backgroundImage = "url('./img/APPLE_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/APPLE_1.png')"
+    productContentHeader.innerHTML = '<h1>Apple Watch Ultra 2<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/APPLE_1.png')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/APPLE_2.png')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/APPLE_3.webp')"
+    })
+}
+
+function Vision_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/VISION_1.png')"
+    secondImage.style.backgroundImage = "url('./img/VISION_2.png')"
+    thirdImage.style.backgroundImage = "url('./img/VISION_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/VISION_1.png')"
+    productContentHeader.innerHTML = '<h1>Apple Vision Pro VR szemüveg, 512 GB, szürke<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/VISION_1.png')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/VISION_2.png')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/VISION_3.webp')"
+    })
+}
+
+
 
 const loginData_value = document.querySelector('.loginData h4')
 const loginForm = document.querySelector('.loginForm')
@@ -162,7 +280,7 @@ const settingsBlock = document.querySelector('.settingsBlock')
 const closeWindowSettings = document.querySelector('.closeWindowSettings')
 const header = document.querySelector('header')
 const carouselImg = document.querySelectorAll('.carouselSlide img')
-const productCardText = document.querySelectorAll('.productCardText') 
+const productCardText = document.querySelectorAll('.productCardText')
 const productTexth4 = document.querySelector('.productText h4')
 const productTexth2 = document.querySelector('.productText h2')
 const cartIncludeButton = document.querySelector('.cartInclude')
@@ -189,8 +307,19 @@ const firstPic = document.querySelector('.firstPic')
 const secondPic = document.querySelector('.secondPic')
 const thirdPic = document.querySelector('.thirdPic')
 const FujiWindow = document.querySelector('.Fuji')
-const productList = document.querySelector(".productList");
-const slideButtons = document.querySelectorAll(".slideButton");
+const productList = document.querySelector(".productList")
+const slideButtons = document.querySelectorAll(".slideButton")
+const LaptopWindow = document.querySelector('.Laptop')
+const RazerWindow = document.querySelector('.Razer')
+const KeychronWindow = document.querySelector('.Keychron')
+const AppleWindow = document.querySelector('.Apple')
+const VisionWindow = document.querySelector('.Vision')
+const productImg = document.querySelectorAll('.productIMGs')
+const productWindowS = document.querySelector('.productShowout')
+const productbutton = document.querySelector('.productShowoutButton h6')
+const productbuttonCart = document.querySelector('.productShowoutButton i')
+
+
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -232,9 +361,11 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide)
+    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide, productImg, productWindowS, mainPicture, productbutton, productbuttonCart)
+
     themeChange.style.display = ''
     srightSide.style.color = 'lightgray'
+
     settings_a.forEach(item => {
         item.addEventListener('mouseover', () => {
             item.style.backgroundColor = 'gray'
@@ -246,9 +377,12 @@ darkT_Div.addEventListener('click', () => {
 })
 
 lightT_Div.addEventListener('click', () => {
-    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide)
+    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide, productImg, productWindowS, mainPicture, 
+    productbutton, productbuttonCart)
+
     themeChange.style.display = ''
     srightSide.style.color = ''
+
     settings_a.forEach(item => {
         item.addEventListener('mouseover', () => {
             item.style.backgroundColor = ''
@@ -282,7 +416,7 @@ main.addEventListener('mouseover', () => {
         favouritesWindow.style.display = ''
         cartWindow.style.display = ''
         loginWindow.style.display = ''
-    }, 800)
+    }, 600)
 })
 
 section.addEventListener('mouseover', () => {
@@ -305,13 +439,12 @@ productCard.forEach(item => {
     item.addEventListener("click", () => {
         productShowout.style.display = "flex"
         webBody.style.overflow = "hidden"
-    })    
+    })
 })
 
 productShowoutExit.addEventListener("click", () => {
     productShowout.style.display = "none"
-    webBody.style.backgroundColor = ""
-    webBody.style.overflow = ""
+    webBody.style.overflow = ''
 })
 
 
@@ -319,7 +452,7 @@ productShowoutExit.addEventListener("click", () => {
 settings_a.forEach(item => {
     item.addEventListener('click', () => {
         alert('Nem működik!')
-    })    
+    })
 })
 
 searchButton.addEventListener('click', () => {
@@ -332,10 +465,10 @@ afterLoginWindow.addEventListener('mouseover', () => {
 
 DJIwindow.addEventListener('click', () => {
     DJI_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
-    
+
 })
 
-    
+
 slideButtons.forEach(button => {
     button.addEventListener("click", () => {
         const direction = button.id === "prevSlide" ? -1 : 1
@@ -349,4 +482,24 @@ XiaomiWindow.addEventListener('click', () => {
 
 TvWindow.addEventListener('click', () => {
     TV_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+LaptopWindow.addEventListener('click', () => {
+    Laptop_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+RazerWindow.addEventListener('click', () => {
+    Razer_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+KeychronWindow.addEventListener('click', () => {
+    Keychron_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+AppleWindow.addEventListener('click', () => {
+    Apple_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+VisionWindow.addEventListener('click', () => {
+    Vision_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
 })

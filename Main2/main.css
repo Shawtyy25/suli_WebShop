@@ -66,12 +66,13 @@ main {
 .productSlideshow {
     width: 100%;
     padding: 1rem 0;
+    height: 100%;
 }
 
-.sliderWrapper{
+.sliderWrapper {
     position: relative;
 }
-  
+
 .slideButton {
     position: absolute;
     top: 50%;
@@ -90,20 +91,20 @@ main {
     border-radius: 50%;
     transform: translateY(-50%);
 }
-  
-.slideButton:hover{
+
+.slideButton:hover {
     background: #404040;
 }
-  
+
 #prevSlide {
     left: -25px;
 }
-  
+
 #nextSlide {
     right: -25px;
 }
-  
-.productList{
+
+.productList {
     display: grid;
     grid-template-columns: repeat(10, 10fr);
     gap: 1rem;
@@ -162,32 +163,65 @@ main {
     background-color: white;
 }
 
-.DJIBG{
+.DJIBG {
     background-image: url(./img/DJI_1.png);
 }
 
-.XiaomiBG{
-    background-image: url(./img/XIAOMI_1.jpg);
+.XiaomiBG {
+    background-image: url(./img/XIAOMI_1.png);
+    background-size: 70% !important;
 }
 
-.TvBG{
-    background-image: url(./img/TV_1.jpg);
+.TvBG {
+    background-image: url(./img/TV_1.png);
 }
+
+.LaptopBG {
+    background-image: url(./img/LAPTOP_1.png);
+}
+
+.RazerBG {
+    background-image: url(./img/RAZER_1.webp);
+    background-size: 70% !important;
+}
+
+.KeychronBG {
+    background-image: url(./img/KEYCHRON_1.png);
+}
+
+.AppleBG {
+    background-image: url(./img/APPLE_1.png);
+
+}
+
+.VisionBG {
+    background-image: url(./img/VISION_2.png);
+    background-size: 70% !important;
+}
+
+.productCard p{
+    font-size: 1rem;
+}
+
+
 
 .productCardText {
     padding: .5rem 1rem 1rem 1rem;
     border-radius: 0 0 1rem 1rem;
+    height: 180px;
 }
+
 
 .productCardRating {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    transform: translateY(50px); 
 }
 
 .productCardRatingStars {
     margin-right: 1rem;
+    font-size: 1rem;
 }
 
 .productCardRating h6 {
@@ -213,7 +247,7 @@ main {
     background-color: rgba(42, 42, 42, 0.5);
 }
 
-.productShowoutDiv{
+.productShowoutDiv {
     background-color: rgba(0, 0, 0, 0.61);
     height: 201vh;
     width: 100vw;
@@ -236,7 +270,6 @@ main {
     padding: 2rem;
     gap: 1rem;
     border-radius: 20px;
-    transition: all .2s;
 }
 
 .productShowoutContent {
@@ -276,7 +309,7 @@ main {
 .firstPic {
     position: relative;
     cursor: pointer;
-    
+
 }
 
 .firstPic h1 {
@@ -311,17 +344,17 @@ main {
     right: 45%;
 }
 
-.productPics{
+.productPics {
     border-radius: 10px;
     transition: all .1s;
     background-color: rgba(14, 14, 14, 0.767);
 }
 
-.productPics:hover{
+.productPics:hover {
     box-shadow: 0 0 5px 2px rgb(68, 68, 68);
 }
 
-.productPics:active{
+.productPics:active {
     scale: .98;
 }
 
@@ -349,10 +382,10 @@ main {
     line-height: 1.5rem;
 }
 
-.mainPicture{
+.mainPicture {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     height: 100%;
-    width: 30vw;
+    width: 35vw;
     cursor: zoom-in;
     background-repeat: no-repeat;
     background-position: center;
@@ -381,7 +414,17 @@ main {
     left: 50%;
     transform: translate(-50%);
     width: 100%;
+    
 }
+.productShowoutButton h6{
+    transition: all .2s;
+}
+
+.productShowoutButton h6:hover{
+    background-color: rgb(35, 22, 207);
+}
+
+
 
 .productShowoutButton i,
 .productShowoutButton h6 {
@@ -471,38 +514,38 @@ footer {
 
 
 @media (max-width:1500px) {
-    main{
+    main {
         width: 98%;
     }
 }
 
 @media (max-width:1420px) {
-    .footerContent{
+    .footerContent {
         width: 95%;
     }
 }
 
 @media (max-width:1040px) {
-    .footerContent{
+    .footerContent {
         flex-wrap: wrap;
         gap: 1rem;
     }
 }
 
 @media (max-width:972px) {
-    .footerContent{
+    .footerContent {
         justify-content: center;
     }
 }
 
 @media (max-width:800px) {
-    .carouselSlide{
+    .carouselSlide {
         display: none;
     }
 }
 
 @media (max-width:650px) {
-    .footerContent{
+    .footerContent {
         justify-content: space-between;
     }
 }
