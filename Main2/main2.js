@@ -13,7 +13,7 @@ function mouseEffects(currentDiv, randWindow, randWindow2, currentWindow, random
 }
 
 
-function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide, productIMG, productBG) {
+function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide, productIMG, productBG, mainIMG, productButton, productButtonCart) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--darkNav)'
     });
@@ -46,16 +46,20 @@ function darkTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext
     rightSide.style.backgroundColor = 'var(--darkNav)'
 
     productIMG.forEach(item => {
-        item.style.filter = 'brightness(60%)'
+        item.style.filter = 'brightness(80%)'
     })
 
     productBG.style.backgroundColor = 'var(--darkNav)'
     productBG.style.color = 'white'
 
+    mainIMG.style.backgroundColor = 'var(--darkCards)'
+
+    productButton.style.backgroundColor = 'var(--ButtonColor)'
+    productButtonCart.style.backgroundColor = 'var(--darkBgNav)'
 }
 
 
-function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide, productIMG) {
+function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtext, productTextH2, productTextH4, cartIncludeBg, footer, leftSide, rightSide, productIMG, productBG, mainIMG, productButton, productButtonCart) {
     dropdown.forEach(item => {
         item.style.backgroundColor = 'var(--lightNav)'
     });
@@ -89,6 +93,14 @@ function lightTheme(body, dropdown, arrowUp, header, carouselIMG, productcardtex
     productIMG.forEach(item => {
         item.style.filter = 'brightness(100%)'
     })
+
+    productBG.style.backgroundColor = ''
+    productBG.style.color = ''
+
+    mainIMG.style.backgroundColor = ''
+
+    productButton.style.backgroundColor = ''
+    productButtonCart.style.backgroundColor = ''
 }
 
 function DJI_card(productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
@@ -304,7 +316,8 @@ const AppleWindow = document.querySelector('.Apple')
 const VisionWindow = document.querySelector('.Vision')
 const productImg = document.querySelectorAll('.productIMGs')
 const productWindowS = document.querySelector('.productShowout')
-
+const productbutton = document.querySelector('.productShowoutButton h6')
+const productbuttonCart = document.querySelector('.productShowoutButton i')
 
 
 
@@ -348,7 +361,7 @@ t_Settings.addEventListener('click', () => {
 
 
 darkT_Div.addEventListener('click', () => {
-    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide, productImg, productWindowS, mainPicture)
+    darkTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide, productImg, productWindowS, mainPicture, productbutton, productbuttonCart)
 
     themeChange.style.display = ''
     srightSide.style.color = 'lightgray'
@@ -364,7 +377,8 @@ darkT_Div.addEventListener('click', () => {
 })
 
 lightT_Div.addEventListener('click', () => {
-    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide, productImg)
+    lightTheme(body, dropdown_window, arrowUp, header, carouselImg, productCardText, productTexth2, productTexth4, cartIncludeButton, footerContent, sLeftSide, srightSide, productImg, productWindowS, mainPicture, 
+    productbutton, productbuttonCart)
 
     themeChange.style.display = ''
     srightSide.style.color = ''
