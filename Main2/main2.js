@@ -153,6 +153,83 @@ function Laptop_card( productWindow, firstImage, secondImage, thirdImage, mainIm
         mainImage.style.backgroundImage = "url('./img/LAPTOP_3.jpg')"
     })
 }
+function Razer_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/RAZER_1.webp')"
+    secondImage.style.backgroundImage = "url('./img/RAZER_2.webp')"
+    thirdImage.style.backgroundImage = "url('./img/RAZER_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/RAZER_1.webp')"
+    productContentHeader.innerHTML = '<h1>Razer DeathAdder Essential 2021 Gaming Egér, Fekete<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/RAZER_1.webp')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/RAZER_2.webp')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/RAZER_3.webp')"
+    })
+}
+
+function Keychron_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/KEYCHRON_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/KEYCHRON_2.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/KEYCHRON_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/KEYCHRON_1.jpg')"
+    productContentHeader.innerHTML = '<h1>Keychron K2 vezeték nélküli mechanikus billentyűzet<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/KEYCHRON_1.jpg')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/KEYCHRON_2.jpg')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/KEYCHRON_3.webp')"
+    })
+}
+
+
+function Apple_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/APPLE_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/APPLE_2.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/APPLE_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/APPLE_1.jpg')"
+    productContentHeader.innerHTML = '<h1>Apple Watch Ultra 2<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/APPLE_1.jpg')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/APPLE_2.jpg')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/APPLE_3.webp')"
+    })
+}
+
+function Vision_card( productWindow, firstImage, secondImage, thirdImage, mainImage, productContentHeader) {
+    productWindow.style.display = 'flex'
+    firstImage.style.backgroundImage = "url('./img/VISION_1.jpg')"
+    secondImage.style.backgroundImage = "url('./img/VISION_2.jpg')"
+    thirdImage.style.backgroundImage = "url('./img/VISION_3.webp')"
+    mainImage.style.backgroundImage = "url('./img/VISION_1.jpg')"
+    productContentHeader.innerHTML = '<h1>Apple Vision Pro VR szemüveg, 512 GB, szürke<h1>'
+
+    firstPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/VISION_1.jpg')"
+    })
+    secondPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/VISION_2.jpg')"
+    })
+    thirdPic.addEventListener('click', () => {
+        mainImage.style.backgroundImage = "url('./img/VISION_3.webp')"
+    })
+}
+
 
 
 const loginData_value = document.querySelector('.loginData h4')
@@ -209,6 +286,10 @@ const FujiWindow = document.querySelector('.Fuji')
 const productList = document.querySelector(".productList")
 const slideButtons = document.querySelectorAll(".slideButton")
 const LaptopWindow = document.querySelector('.Laptop')
+const RazerWindow = document.querySelector('.Razer')
+const KeychronWindow = document.querySelector('.Keychron')
+const AppleWindow = document.querySelector('.Apple')
+const VisionWindow = document.querySelector('.Vision')
 
 if (loginData_value.textContent == 'Bejelentkezés') {
 
@@ -371,4 +452,20 @@ TvWindow.addEventListener('click', () => {
 
 LaptopWindow.addEventListener('click', () => {
     Laptop_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+RazerWindow.addEventListener('click', () => {
+    Razer_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+KeychronWindow.addEventListener('click', () => {
+    Keychron_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+AppleWindow.addEventListener('click', () => {
+    Apple_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
+})
+
+VisionWindow.addEventListener('click', () => {
+    Vision_card(productShowout, leftPicturesFirstIMG, leftPicturesSecondIMG, leftPicturesThirdIMG, mainPicture, productContentH1)
 })
