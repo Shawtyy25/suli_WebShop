@@ -199,10 +199,16 @@ main {
     background-size: 70% !important;
 }
 
+.productCard p{
+    font-size: 1rem;
+}
+
+
 .productCardText {
     padding: .5rem 1rem 1rem 1rem;
     border-radius: 0 0 1rem 1rem;
 }
+
 
 .productCardRating {
     display: flex;
@@ -213,6 +219,7 @@ main {
 
 .productCardRatingStars {
     margin-right: 1rem;
+    font-size: 1rem;
 }
 
 .productCardRating h6 {
